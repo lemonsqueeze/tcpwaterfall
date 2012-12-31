@@ -6,6 +6,7 @@ my $mintime = -1;
 my $maxtime = 0;
 my @packets;
 
+# Parse output from tcpdump -tt -s 500 -l -i any
 foreach my $str (<STDIN>)
 {
 # 1335080288.483710 IP 192.168.1.102.59415 > 69.164.192.221.80: Flags [S], seq 4016928255, win 5840, options [mss 1460,sackOK,TS val 40991055 ecr 0], length 0    
@@ -30,16 +31,12 @@ my @timelines;
 sub stream_no
 { 
     my ($src, $sport, $dst, $dport) = @_;
-    $src =~ s|127.0.0.1|lo|g;
-    $dst =~ s|127.0.0.1|lo|g;
-    $src =~ s|192.168.1.102|eth0|g;
-    $dst =~ s|192.168.1.102|eth0|g;
-    my $id = sprintf("%15s:%-5s > %15s:%-5s", $src, $sport, $dst, $dport);
+    my $id = sprintf("%s:%s|%s:%s", $src, $sport, $dst, $dport);
 
     if ($stream_nos{$id})
     { return $stream_nos{$id}; }
     my $n = keys(%stream_nos) + 1;
-#    printf("new stream: %02i: $src:$sport-$dst:$dport\n", $n);
+#    printf("new stream: %02i: $id\n", $n);
     $stream_nos{$id} = $n;
     $nos_to_stream{$n} = $id;
     my @empty;
@@ -68,6 +65,30 @@ for (my $i = 0; $i < @packets; $i++)
 #    print "$timestamp $slot $n\n";
 }
 
+################################################################################
+# Output
+
+%color = ( "wb" => "\033[40;37;1m",  # white bold
+           "rb" => "\033[40;31;1m",  # red bold
+           "yb" => "\033[40;33;1m",  # yellow bold
+           "pb" => "\033[40;35;1m",  # purple bold
+           "bb" => "\033[40;34;1m",  # blue bold
+           "cb" => "\033[40;36;1m",  # cyan bold
+           "e" => "\033[0m");
+
+# Formatting: Find longest src:sport and dst:dport
+my $field_src = 0;
+my $field_dst = 0;
+for (my $j = 1; $j < @timelines; $j += 2)
+{
+#    printf("stream %02i: ", $j);
+    my $stream = $nos_to_stream{$j};
+    my ($spart, $dpart) = split(/\|/, $stream);
+    $field_src = length($spart) if (length($spart) > $field_src);
+    $field_dst = length($dpart) if (length($dpart) > $field_dst);
+}
+
+# Print scale
 my $str = "";
 my $nslots = int(($maxtime - $mintime) / $interval);
 my $scaleint=10;
@@ -75,20 +96,38 @@ for (my $i = 0; $i < $nslots; $i += $scaleint)
 {
     $str .= sprintf("%-*s", $scaleint, ($i * $interval) . "s");
 }
-printf("    %-45s: %s\n", "", $str);
+printf("%*s: %s\n", $field_src + $field_dst + 7, "", $str);
 
 
 for (my $j = 1; $j < @timelines; $j++)
 {
 #    printf("stream %02i: ", $j);
-    printf("%02i: %-45s: ", $j, $nos_to_stream{$j});
+    my $stream = $nos_to_stream{$j};
+    my ($spart, $dpart) = split(/\|/, $stream);
+
+    # Coloring
+    $col_begin = $color{"yb"};
+    $col_end = $color{"e"};
+#    if ($stream =~ m|lo:|)
+    if ($stream =~ m|localhost| ||
+	$stream =~ m|127\.0\.0\.1|)
+    {
+	$col_begin = $color{"bb"};
+	$col_end = $color{"e"};
+    }
+
+    if (($j % 2) == 1)
+    { printf("%s%02i: %*s > %*s: ", $col_begin, $j, $field_src, $spart, $field_dst, $dpart); }
+    else
+    { printf("%s%02i: %*s < %*s  ", $col_begin, $j, $field_src, "", $field_dst, ""); }
+
     my @timeline = @{$timelines[$j]};
     my $str = "";
     for (my $i = 0; $i < @timeline; $i++)
     {
 	$str .= ($timeline[$i] ? $timeline[$i] : ".");
     }
-    print "$str\n";
+    print "$str$col_end\n";
     print "\n" if (!($j % 2));
 }
 
