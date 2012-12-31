@@ -1,0 +1,86 @@
+                           tcpwaterfall
+                           ============
+
+
+Usage: tcpwaterfall [options]
+
+  Display a waterfall diagram of tcp connections from tcpdump output.
+
+  Diagram scale:
+    -t timescale  Set diagram's time scale in ms  [default 50]
+                  (1 char on screen = timescale ms)
+    -w            Fit to term's width.
+    -c cols       Number of columns to display output.
+
+  Display etc:
+    -l            Show hostname for localhost instead of port only.
+    -z            Show packets without data (acks...)  (default: hidden)
+    -r            Raw output, don't use colors.
+    -debug        Debug mode. Show packets ignored by the parser.
+
+  Live capture options:
+    -i            live mode.
+    -s            scroll instead of changing scale.
+    -keep         keep all connections even if empty (for scroll mode).
+    -d interval   interval between updates.
+
+Examples:
+  File mode:
+  1) Generate capture file with something like:
+       tcpdump -tt -s 500 -l -i any > capture_file          (-tt is important)
+     To use wireshark capture, save in "wireshark/tcpdump/libpcap" format, and
+       tcpdump -tt -s 500 -l -r wireshark_capture.pcap > capture_file
+     (use -n if you don't want name resolution)
+  2) View tcpwaterfall output with less (use arrows to navigate the waterfall!)
+       tcpwaterfall [options] < capture_file | less -SR
+
+  Live capture:    keeping everything on screen (shrink scale):
+      tcpdump -tt -s 500 -l -i any | ./tcpwaterfall -i
+    scroll mode (drop old packets):
+      tcpdump -tt -s 500 -l -i any | ./tcpwaterfall -s -t 100
+
+  Stream display  [: SYN flag
+      format:     ]: FIN flag
+                  O: SYN then FIN
+                  I: FIN then SYN
+                  #: packet with data
+                  _: packet without data (ack... only shown with -z)
+                  .: silence
+
+---------------------------------------------------------------------------------
+
+Screenshot:
+
+
+202 Packets, 6.052s Total. Timescale: 50ms.
+
+                    Time: 0s        0.5s      1s        1.5s      2s        2.5s    
+01:              :33862 > [#......................]
+    wikimedia.org:www   <  [.............###.#.##]
+
+02:              :33865 >                           [.#...]
+    wikimedia.org:www   <                             [...#]
+
+03:              :52845 >                            [.#....#]
+    wikimedia.org:www   <                              [.....#]
+
+04:              :43189 >                               [.....#....]
+    wikimedia.org:www   <                                     [....]
+
+05:              :43190 >                               [.....#................#...]
+    wikimedia.org:www   <                                     [....................]
+
+06:              :43193 >                                    [...#.....]
+    wikimedia.org:www   <                                        [.....]
+
+07:              :43194 >                                    [...#.......]
+    wikimedia.org:www   <                                        [.......]
+
+08:              :43196 >                                             [..#...]
+    wikimedia.org:www   <                                                [...]
+
+
+---------------------------------------------------------------------------------
+
+Note: python version is used for testing and doesn't support all the options.
+

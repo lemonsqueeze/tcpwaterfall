@@ -1,8 +1,7 @@
 
 - one line per conn. mode ?
+- combo live + file mode:
+  live mode = preview, ^C, scrollable display 
 - split by interface ?
-- some kind of interactive mode
-  launch tcpdump, ^C, show result ?
-  or better live mode -> scroll !
-
+- live mode: run tcpdump internally instead of pipe
 
