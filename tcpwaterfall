@@ -1,6 +1,10 @@
 #!/usr/bin/perl
 
+# Interval in seconds (= 1 char on screen)
 my $interval = .1;
+
+# Time scale spacing (characters)
+my $scaleint = 10;
 
 my $mintime = -1;
 my $maxtime = 0;
@@ -26,23 +30,23 @@ foreach my $str (<STDIN>)
 #print "\n";
 
 my %streams_nos;
-my %nos_to_stream;
+my %nos_stream;
 my @timelines;
 sub stream_no
 { 
     my ($src, $sport, $dst, $dport) = @_;
-    my $id = sprintf("%s:%s|%s:%s", $src, $sport, $dst, $dport);
+    my $id = sprintf("%s:%s:%s:%s", $src, $sport, $dst, $dport);
 
     if ($stream_nos{$id})
     { return $stream_nos{$id}; }
     my $n = keys(%stream_nos) + 1;
 #    printf("new stream: %02i: $id\n", $n);
     $stream_nos{$id} = $n;
-    $nos_to_stream{$n} = $id;
+    $nos_stream{$n} = $id;
     my @empty;
     $timelines[$n] = \@empty;
 
-    # add reverse direction
+    # add reverse direction as well.
     stream_no($dst, $dport, $src, $sport);
     return $n;
 }
@@ -50,6 +54,7 @@ sub stream_no
 my $n = @packets;
 printf("packets: %i\n", $n);
 
+# Fill in timeline data
 for (my $i = 0; $i < @packets; $i++)
 {
     my ($timestamp, $src, $sport, $dst, $dport, $flags, $len) = @{$packets[$i]};
@@ -58,9 +63,19 @@ for (my $i = 0; $i < @packets; $i++)
     my $n = stream_no($src, $sport, $dst, $dport);
     my $timeline = $timelines[$n];
 
-    $timeline->[$slot] = "]" if ($flags =~ m|F|);
-    $timeline->[$slot] = "[" if ($flags =~ m|S|);	
-    $timeline->[$slot] = "#" if (!$timeline->[$slot]);
+    # Syn + Fin
+    $timeline->[$slot] = "O" if ($timeline->[$slot] eq "[" && $flags =~ m|F|);
+    # Fin + Syn
+    $timeline->[$slot] = "I" if ($timeline->[$slot] eq "]" && $flags =~ m|S|);
+    if (!$timeline->[$slot])
+    {
+	# Syn
+	$timeline->[$slot] = "[" if ($flags =~ m|S|);
+	# Fin
+	$timeline->[$slot] = "]" if ($flags =~ m|F|);
+	# Anything else
+	$timeline->[$slot] = "#" if (!$timeline->[$slot]);
+    }
 
 #    print "$timestamp $slot $n\n";
 }
@@ -76,39 +91,34 @@ for (my $i = 0; $i < @packets; $i++)
            "cb" => "\033[40;36;1m",  # cyan bold
            "e" => "\033[0m");
 
-# Formatting: Find longest src:sport and dst:dport
-my $field_src = 0;
-my $field_dst = 0;
-for (my $j = 1; $j < @timelines; $j += 2)
+# Formatting: Find longest src
+my $max_src = 0;
+for (my $j = 1; $j < @timelines; $j++)
 {
-#    printf("stream %02i: ", $j);
-    my $stream = $nos_to_stream{$j};
-    my ($spart, $dpart) = split(/\|/, $stream);
-    $field_src = length($spart) if (length($spart) > $field_src);
-    $field_dst = length($dpart) if (length($dpart) > $field_dst);
+    my $stream = $nos_stream{$j};
+    my ($src) = split(/:/, $stream);
+    $max_src = length($src) if (length($src) > $max_src);
 }
 
 # Print scale
 my $str = "";
 my $nslots = int(($maxtime - $mintime) / $interval);
-my $scaleint=10;
 for (my $i = 0; $i < $nslots; $i += $scaleint)
 {
     $str .= sprintf("%-*s", $scaleint, ($i * $interval) . "s");
 }
-printf("%*s: %s\n", $field_src + $field_dst + 7, "", $str);
+printf("%*s: %s\n", $max_src + 11, "Time", $str);
 
 
 for (my $j = 1; $j < @timelines; $j++)
 {
 #    printf("stream %02i: ", $j);
-    my $stream = $nos_to_stream{$j};
-    my ($spart, $dpart) = split(/\|/, $stream);
+    my $stream = $nos_stream{$j};
+    my ($src, $sport) = split(/:/, $stream);
 
     # Coloring
     $col_begin = $color{"yb"};
     $col_end = $color{"e"};
-#    if ($stream =~ m|lo:|)
     if ($stream =~ m|localhost| ||
 	$stream =~ m|127\.0\.0\.1|)
     {
@@ -117,15 +127,22 @@ for (my $j = 1; $j < @timelines; $j++)
     }
 
     if (($j % 2) == 1)
-    { printf("%s%02i: %*s > %*s: ", $col_begin, $j, $field_src, $spart, $field_dst, $dpart); }
-    else
-    { printf("%s%02i: %*s < %*s  ", $col_begin, $j, $field_src, "", $field_dst, ""); }
+    { printf("%s%02i: %*s:%-5s > ", $col_begin, ($j+1)/2, $max_src, $src, $sport); }
+    else # Reverse direction
+    { printf(  "%s    %*s:%-5s < ", $col_begin,           $max_src, $src, $sport); }
 
     my @timeline = @{$timelines[$j]};
     my $str = "";
+    my $seen_something = 0;
     for (my $i = 0; $i < @timeline; $i++)
     {
-	$str .= ($timeline[$i] ? $timeline[$i] : ".");
+	if ($timeline[$i])
+	{
+	    $seen_something = 1;
+	    $str .= $timeline[$i];
+	    next;
+	}
+	$str .= ($seen_something ? "." : " ");
     }
     print "$str$col_end\n";
     print "\n" if (!($j % 2));
