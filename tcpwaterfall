@@ -1,20 +1,108 @@
 #!/usr/bin/perl
 
-# Interval in seconds (= 1 char on screen)
-my $interval = .1;
+# Diagram timescale in ms (= 1 char on screen)
+my $timescale_ms = 50;
 
 # Time scale spacing (characters)
 my $scaleint = 10;
 
+my $tcpdump_cmd = "tcpdump -tt -s 500 -l -i any";
+
+##############################################################
+# cmdline args
+
+sub usage
+{
+    print "Usage: tcpwaterfall [options] < capture_file | less -SR\n";
+    print "\n";
+    print "  Display a waterfall diagram of tcp connections from tcpdump output.\n";
+    print "  Open in your favorite editor, or less to makes it 4 way scrollable\n";
+    print "  (use arrows to navigate the waterfall!)\n";
+    print "\n";
+    print "  Generate capture file with something like:\n";
+    print "    $tcpdump_cmd > capture_file          (-tt is important)\n";
+    print "  To use wireshark capture, save in \"wireshark/tcpdump/libpcap\" format, and\n";
+    print "    tcpdump -tt -s 500 -l -r wireshark_capture.pcap > capture_file\n";
+    print "  (use -n if you don't want name resolution)\n";
+    print "\n";
+    print "  Diagram scale:\n";
+    print "    -t timescale  Set diagram's time scale in ms  [default $timescale_ms]\n";
+    print "                  (1 char on screen = timescale ms)\n";
+    print "    -w            Fit to term's width.\n";
+    print "    -c cols       Number of columns to display output.\n";
+    print "\n";
+    print "  Display etc:\n";
+    print "    -l            Show hostname for localhost instead of port only.\n";
+    print "    -z            Show packets without data (acks...)  (default: hidden)\n";
+    print "    -r            Raw output, don't use colors.\n";
+    print "    -d            Debug mode. Show packets ignored by the parser.\n";
+    print "\n";
+    print "  Stream display  [: SYN flag\n";
+    print "      format:     ]: FIN flag\n";
+    print "                  O: SYN then FIN\n";
+    print "                  I: FIN then SYN\n";
+    print "                  #: packet with data\n";
+    print "                  _: packet without data (ack...)\n";
+    print "                  .: silence\n";
+    exit(1);
+}
+
+for (; @ARGV != 0; shift(@ARGV))
+{
+   if ($ARGV[0] eq "-t")
+   {
+       shift(@ARGV);       
+       $timescale_ms = $ARGV[0];
+       next;
+   }
+   if ($ARGV[0] eq "-r")
+   {
+       $no_colors=1;
+       next;
+   }
+   if ($ARGV[0] eq "-d")
+   {
+       $debug_mode=1;
+       next;
+   }
+   if ($ARGV[0] eq "-w")
+   {
+       $columns = `tput cols`;
+       next;
+   }
+   if ($ARGV[0] eq "-c")
+   {
+       shift(@ARGV);       
+       $columns = $ARGV[0];
+       next;
+   }
+   if ($ARGV[0] eq "-l")
+   {
+       $show_localhost_src = 1;
+       next;
+   }
+   if ($ARGV[0] eq "-z")
+   {
+       $show_empty = 1;
+       next;
+   }
+
+   usage();
+}
+
+##############################################################
+# processing
+
 my $mintime = -1;
 my $maxtime = 0;
 my @packets;
+# Formatting: longest src
+my $max_src = 0;
 
-# Parse output from tcpdump -tt -s 500 -l -i any
+# tcpdump output parsing
 foreach my $str (<STDIN>)
 {
-# 1335080288.483710 IP 192.168.1.102.59415 > 69.164.192.221.80: Flags [S], seq 4016928255, win 5840, options [mss 1460,sackOK,TS val 40991055 ecr 0], length 0    
-    if ($str =~ m|(.*) IP (.*)\.([^.]*) > (.*)\.([^.]*): Flags \[(.*)\], seq .*, win .*, options \[.*\], length (.*)|)
+    if ($str =~ m|(.*) IP (.*)\.([^.]*) > (.*)\.([^.]*): Flags \[(.*)\],.*, length (.*)|)
     {
 	my @tab = ($1, $2, $3, $4, $5, $6, $7);
 	my ($timestamp, $src, $sport, $dst, $dport, $flags, $len) = @tab;
@@ -22,13 +110,17 @@ foreach my $str (<STDIN>)
 
 	$mintime = $timestamp if ($mintime eq -1);
 	$maxtime = $timestamp;
+	$max_src = length($src) if (length($src) > $max_src);
 
 	push(@packets, \@tab);
-	#@{$packets[@packets]} = @tab;
+	next;
     }
+    print $str if ($debug_mode);
 }
 #print "\n";
+exit(0) if ($debug_mode);
 
+# Stream handling
 my %streams_nos;
 my %nos_stream;
 my @timelines;
@@ -36,9 +128,9 @@ sub stream_no
 { 
     my ($src, $sport, $dst, $dport) = @_;
     my $id = sprintf("%s:%s:%s:%s", $src, $sport, $dst, $dport);
-
     if ($stream_nos{$id})
     { return $stream_nos{$id}; }
+
     my $n = keys(%stream_nos) + 1;
 #    printf("new stream: %02i: $id\n", $n);
     $stream_nos{$id} = $n;
@@ -52,64 +144,73 @@ sub stream_no
 }
 
 my $n = @packets;
-printf("packets: %i\n", $n);
+$line_head_len = $max_src + 13;  # length of "n: src:port > " part
+$timescale = $timescale_ms / 1000;
+if ($columns)
+{
+    my $avail = $columns - $line_head_len - 1;
+    $timescale = ($maxtime - $mintime) / $avail if ($avail > 5);
+}
+
+printf("%i Packets, %ss Total. Timescale: %ims.\n\n", 
+       $n, format_float($maxtime - $mintime), $timescale * 1000);
 
 # Fill in timeline data
 for (my $i = 0; $i < @packets; $i++)
 {
     my ($timestamp, $src, $sport, $dst, $dport, $flags, $len) = @{$packets[$i]};
-    my $slot = int(($timestamp - $mintime) / $interval);
+    my $slot = int(($timestamp - $mintime) / $timescale);
 
     my $n = stream_no($src, $sport, $dst, $dport);
     my $timeline = $timelines[$n];
 
-    # Syn + Fin
-    $timeline->[$slot] = "O" if ($timeline->[$slot] eq "[" && $flags =~ m|F|);
-    # Fin + Syn
-    $timeline->[$slot] = "I" if ($timeline->[$slot] eq "]" && $flags =~ m|S|);
-    if (!$timeline->[$slot])
-    {
-	# Syn
-	$timeline->[$slot] = "[" if ($flags =~ m|S|);
-	# Fin
-	$timeline->[$slot] = "]" if ($flags =~ m|F|);
-	# Anything else
-	$timeline->[$slot] = "#" if (!$timeline->[$slot]);
-    }
+    if ($flags =~ m|S|)  # SYN Flag
+    {	$timeline->[$slot] = ($timeline->[$slot] eq "]" ? "I" : "[");    }
 
-#    print "$timestamp $slot $n\n";
+    if ($flags =~ m|F|)  # FIN Flag
+    {	$timeline->[$slot] = ($timeline->[$slot] eq "[" ? "O" : "]");    }
+
+    # Packet with data
+    if ($len > 0 && 
+	(!$timeline->[$slot] || $timeline->[$slot] eq "_"))
+    {	$timeline->[$slot] = "#";    }
+
+    # Anything else
+    $timeline->[$slot] = "_" if ($show_empty && !$timeline->[$slot]);
 }
 
 ################################################################################
 # Output
 
-%color = ( "wb" => "\033[40;37;1m",  # white bold
-           "rb" => "\033[40;31;1m",  # red bold
-           "yb" => "\033[40;33;1m",  # yellow bold
-           "pb" => "\033[40;35;1m",  # purple bold
-           "bb" => "\033[40;34;1m",  # blue bold
-           "cb" => "\033[40;36;1m",  # cyan bold
-           "e" => "\033[0m");
-
-# Formatting: Find longest src
-my $max_src = 0;
-for (my $j = 1; $j < @timelines; $j++)
+if (!$no_colors)
 {
-    my $stream = $nos_stream{$j};
-    my ($src) = split(/:/, $stream);
-    $max_src = length($src) if (length($src) > $max_src);
+    %color = ( "wb" => "\033[40;37;1m",  # white bold
+	       "rb" => "\033[40;31;1m",  # red bold
+	       "yb" => "\033[40;33;1m",  # yellow bold
+	       "pb" => "\033[40;35;1m",  # purple bold
+	       "bb" => "\033[40;34;1m",  # blue bold
+	       "cb" => "\033[40;36;1m",  # cyan bold
+	       "e" => "\033[0m");
+}
+
+sub format_float
+{
+    my ($v) = @_;
+    $v = sprintf("%.3f", $v) if (length($v - int($v)) > 5);
+    return $v;
 }
 
 # Print scale
 my $str = "";
-my $nslots = int(($maxtime - $mintime) / $interval);
+my $nslots = int(($maxtime - $mintime) / $timescale);
 for (my $i = 0; $i < $nslots; $i += $scaleint)
 {
-    $str .= sprintf("%-*s", $scaleint, ($i * $interval) . "s");
+    my $v = format_float($i * $timescale);
+    $str .= sprintf("%-*s", $scaleint, $v . "s");
 }
-printf("%*s: %s\n", $max_src + 11, "Time", $str);
+printf("%*s%s\n", $line_head_len, "Time: ", $str);
 
-
+$hostname = `hostname`;  chomp($hostname);
 for (my $j = 1; $j < @timelines; $j++)
 {
 #    printf("stream %02i: ", $j);
@@ -125,6 +226,11 @@ for (my $j = 1; $j < @timelines; $j++)
 	$col_begin = $color{"bb"};
 	$col_end = $color{"e"};
     }
+
+    $src = "" if (!$show_localhost_src && 
+		  ($src eq "$hostname" ||
+		   $src eq "localhost" ||
+		   $src eq "127.0.0.1"));
 
     if (($j % 2) == 1)
     { printf("%s%02i: %*s:%-5s > ", $col_begin, ($j+1)/2, $max_src, $src, $sport); }

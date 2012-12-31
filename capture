@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "capturing to dump.new"
+#tcpdump -tt -s 500 -l -n -i any | tee dump.new
+tcpdump -tt -s 500 -l -i any | tee dump.new
+

@@ -1,0 +1,639 @@
+1335107159.331113 IP localhost.41949 > localhost.8118: Flags [S], seq 53112622, win 32792, options [mss 16396,sackOK,TS val 47245802 ecr 0], length 0
+1335107159.331180 IP localhost.8118 > localhost.41949: Flags [S.], seq 53265041, ack 53112623, win 32768, options [mss 16396,sackOK,TS val 47245802 ecr 47245802], length 0
+1335107159.331230 IP localhost.41949 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47245802 ecr 47245802], length 0
+1335107159.351626 IP localhost.41949 > localhost.8118: Flags [P.], seq 1:389, ack 1, win 32792, options [nop,nop,TS val 47245807 ecr 47245802], length 388
+1335107159.351707 IP localhost.8118 > localhost.41949: Flags [.], ack 389, win 33768, options [nop,nop,TS val 47245807 ecr 47245807], length 0
+1335107159.352572 IP bilbo-netbook.44149 > router.domain: 24532+ A? www.wikipedia.org. (35)
+1335107159.354076 IP bilbo-netbook.33490 > router.domain: 31595+ PTR? 102.1.168.192.in-addr.arpa. (44)
+1335107159.354928 IP router.domain > bilbo-netbook.33490: 31595* 1/0/0 PTR bilbo-netbook. (71)
+1335107159.411324 IP router.domain > bilbo-netbook.44149: 24532 3/0/0 CNAME wikipedia-lb.wikimedia.org., CNAME wikipedia-lb.esams.wikimedia.org., A 91.198.174.225 (121)
+1335107159.411853 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [S], seq 63912268, win 5840, options [mss 1460,sackOK,TS val 47245822 ecr 0], length 0
+1335107159.412269 IP bilbo-netbook.49852 > router.domain: 17083+ PTR? 225.174.198.91.in-addr.arpa. (45)
+1335107159.443375 IP router.domain > bilbo-netbook.49852: 17083 1/0/0 PTR wikipedia-lb.esams.wikimedia.org. (91)
+1335107159.458536 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [S.], seq 1243724367, ack 63912269, win 5792, options [mss 1412,sackOK,TS val 1132654426 ecr 47245822], length 0
+1335107159.458716 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47245834 ecr 1132654426], length 0
+1335107159.458920 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [P.], seq 1:371, ack 1, win 5840, options [nop,nop,TS val 47245834 ecr 1132654426], length 370
+1335107159.525405 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], ack 371, win 6432, options [nop,nop,TS val 1132654433 ecr 47245834], length 0
+1335107159.526480 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [P.], seq 1:558, ack 371, win 6432, options [nop,nop,TS val 1132654433 ecr 47245834], length 557
+1335107159.526607 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 558, win 6684, options [nop,nop,TS val 47245851 ecr 1132654433], length 0
+1335107159.533015 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 558:1958, ack 371, win 6432, options [nop,nop,TS val 1132654433 ecr 47245834], length 1400
+1335107159.533158 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 1958, win 9800, options [nop,nop,TS val 47245852 ecr 1132654433], length 0
+1335107159.540284 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 1958:3358, ack 371, win 6432, options [nop,nop,TS val 1132654433 ecr 47245834], length 1400
+1335107159.540421 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 3358, win 12600, options [nop,nop,TS val 47245854 ecr 1132654433], length 0
+1335107159.566028 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [P.], seq 3358:4654, ack 371, win 6432, options [nop,nop,TS val 1132654433 ecr 47245834], length 1296
+1335107159.566168 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 4654, win 15400, options [nop,nop,TS val 47245861 ecr 1132654433], length 0
+1335107159.591644 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 4654:6054, ack 371, win 6432, options [nop,nop,TS val 1132654438 ecr 47245851], length 1400
+1335107159.591781 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 6054, win 18200, options [nop,nop,TS val 47245867 ecr 1132654438], length 0
+1335107159.595052 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 6054:7454, ack 371, win 6432, options [nop,nop,TS val 1132654438 ecr 47245852], length 1400
+1335107159.595176 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 7454, win 21000, options [nop,nop,TS val 47245868 ecr 1132654438], length 0
+1335107159.610065 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 7454:8854, ack 371, win 6432, options [nop,nop,TS val 1132654438 ecr 47245852], length 1400
+1335107159.610206 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 8854, win 23800, options [nop,nop,TS val 47245872 ecr 1132654438], length 0
+1335107159.642553 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 8854:10254, ack 371, win 6432, options [nop,nop,TS val 1132654438 ecr 47245852], length 1400
+1335107159.642700 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 10254, win 26600, options [nop,nop,TS val 47245880 ecr 1132654438], length 0
+1335107159.656417 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 10254:11654, ack 371, win 6432, options [nop,nop,TS val 1132654439 ecr 47245854], length 1400
+1335107159.656550 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 11654, win 29400, options [nop,nop,TS val 47245883 ecr 1132654439], length 0
+1335107159.663443 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], seq 11654:13054, ack 371, win 6432, options [nop,nop,TS val 1132654439 ecr 47245854], length 1400
+1335107159.663588 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 13054, win 32200, options [nop,nop,TS val 47245885 ecr 1132654439], length 0
+1335107159.680247 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [FP.], seq 13054:13210, ack 371, win 6432, options [nop,nop,TS val 1132654439 ecr 47245854], length 156
+1335107159.687367 IP localhost.8118 > localhost.41949: Flags [P.], seq 1:534, ack 389, win 33768, options [nop,nop,TS val 47245891 ecr 47245807], length 533
+1335107159.687447 IP localhost.41949 > localhost.8118: Flags [.], ack 534, win 33768, options [nop,nop,TS val 47245891 ecr 47245891], length 0
+1335107159.687532 IP localhost.8118 > localhost.41949: Flags [.], seq 534:16918, ack 389, win 33768, options [nop,nop,TS val 47245891 ecr 47245891], length 16384
+1335107159.687568 IP localhost.41949 > localhost.8118: Flags [.], ack 16918, win 49152, options [nop,nop,TS val 47245891 ecr 47245891], length 0
+1335107159.687628 IP localhost.8118 > localhost.41949: Flags [P.], seq 16918:33302, ack 389, win 33768, options [nop,nop,TS val 47245891 ecr 47245891], length 16384
+1335107159.687662 IP localhost.41949 > localhost.8118: Flags [.], ack 33302, win 49152, options [nop,nop,TS val 47245891 ecr 47245891], length 0
+1335107159.687728 IP localhost.8118 > localhost.41949: Flags [P.], seq 33302:48839, ack 389, win 33768, options [nop,nop,TS val 47245891 ecr 47245891], length 15537
+1335107159.687768 IP localhost.41949 > localhost.8118: Flags [.], ack 48839, win 49152, options [nop,nop,TS val 47245891 ecr 47245891], length 0
+1335107159.687831 IP bilbo-netbook.44616 > wikipedia-lb.esams.wikimedia.org.www: Flags [F.], seq 371, ack 13211, win 32200, options [nop,nop,TS val 47245891 ecr 1132654439], length 0
+1335107159.688004 IP localhost.8118 > localhost.41949: Flags [F.], seq 48839, ack 389, win 33768, options [nop,nop,TS val 47245891 ecr 47245891], length 0
+1335107159.694763 IP localhost.41949 > localhost.8118: Flags [F.], seq 389, ack 48840, win 49152, options [nop,nop,TS val 47245893 ecr 47245891], length 0
+1335107159.694827 IP localhost.8118 > localhost.41949: Flags [.], ack 390, win 33768, options [nop,nop,TS val 47245893 ecr 47245893], length 0
+1335107159.735212 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44616: Flags [.], ack 372, win 6432, options [nop,nop,TS val 1132654454 ecr 47245891], length 0
+1335107159.735725 IP localhost.41951 > localhost.8118: Flags [S], seq 69122802, win 32792, options [mss 16396,sackOK,TS val 47245903 ecr 0], length 0
+1335107159.735768 IP localhost.8118 > localhost.41951: Flags [S.], seq 62187863, ack 69122803, win 32768, options [mss 16396,sackOK,TS val 47245903 ecr 47245903], length 0
+1335107159.735803 IP localhost.41951 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47245903 ecr 47245903], length 0
+1335107159.738679 IP localhost.41951 > localhost.8118: Flags [P.], seq 1:520, ack 1, win 32792, options [nop,nop,TS val 47245904 ecr 47245903], length 519
+1335107159.738736 IP localhost.8118 > localhost.41951: Flags [.], ack 520, win 33768, options [nop,nop,TS val 47245904 ecr 47245904], length 0
+1335107159.739680 IP bilbo-netbook.52735 > router.domain: 47474+ A? en.wikipedia.org. (34)
+1335107159.739979 IP localhost.41952 > localhost.8118: Flags [S], seq 67563164, win 32792, options [mss 16396,sackOK,TS val 47245904 ecr 0], length 0
+1335107159.740019 IP localhost.8118 > localhost.41952: Flags [S.], seq 66397163, ack 67563165, win 32768, options [mss 16396,sackOK,TS val 47245904 ecr 47245904], length 0
+1335107159.740053 IP localhost.41952 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47245904 ecr 47245904], length 0
+1335107159.743613 IP localhost.41952 > localhost.8118: Flags [P.], seq 1:465, ack 1, win 32792, options [nop,nop,TS val 47245905 ecr 47245904], length 464
+1335107159.743672 IP localhost.8118 > localhost.41952: Flags [.], ack 465, win 33768, options [nop,nop,TS val 47245905 ecr 47245905], length 0
+1335107159.744434 IP bilbo-netbook.37191 > router.domain: 34357+ A? bits.wikimedia.org. (36)
+1335107159.774348 IP router.domain > bilbo-netbook.52735: 47474 3/0/0 CNAME wikipedia-lb.wikimedia.org., CNAME wikipedia-lb.esams.wikimedia.org., A 91.198.174.225 (120)
+1335107159.774668 IP bilbo-netbook.44619 > wikipedia-lb.esams.wikimedia.org.www: Flags [S], seq 60912950, win 5840, options [mss 1460,sackOK,TS val 47245913 ecr 0], length 0
+1335107159.782735 IP router.domain > bilbo-netbook.37191: 34357 3/0/0 CNAME bits-geo.wikimedia.org., CNAME bits.esams.wikimedia.org., A 91.198.174.233 (100)
+1335107159.783037 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [S], seq 64339922, win 5840, options [mss 1460,sackOK,TS val 47245915 ecr 0], length 0
+1335107159.783354 IP bilbo-netbook.33971 > router.domain: 8980+ PTR? 233.174.198.91.in-addr.arpa. (45)
+1335107159.812519 IP localhost.41955 > localhost.8118: Flags [S], seq 69769290, win 32792, options [mss 16396,sackOK,TS val 47245922 ecr 0], length 0
+1335107159.812553 IP localhost.8118 > localhost.41955: Flags [S.], seq 58977332, ack 69769291, win 32768, options [mss 16396,sackOK,TS val 47245922 ecr 47245922], length 0
+1335107159.812579 IP localhost.41955 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47245922 ecr 47245922], length 0
+1335107159.813138 IP localhost.41956 > localhost.8118: Flags [S], seq 73847120, win 32792, options [mss 16396,sackOK,TS val 47245922 ecr 0], length 0
+1335107159.813166 IP localhost.8118 > localhost.41956: Flags [S.], seq 70143514, ack 73847121, win 32768, options [mss 16396,sackOK,TS val 47245922 ecr 47245922], length 0
+1335107159.813190 IP localhost.41956 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47245922 ecr 47245922], length 0
+1335107159.815879 IP localhost.41955 > localhost.8118: Flags [P.], seq 1:565, ack 1, win 32792, options [nop,nop,TS val 47245923 ecr 47245922], length 564
+1335107159.815929 IP localhost.8118 > localhost.41955: Flags [.], ack 565, win 33840, options [nop,nop,TS val 47245923 ecr 47245923], length 0
+1335107159.815984 IP localhost.41956 > localhost.8118: Flags [P.], seq 1:472, ack 1, win 32792, options [nop,nop,TS val 47245923 ecr 47245922], length 471
+1335107159.816020 IP localhost.8118 > localhost.41956: Flags [.], ack 472, win 33768, options [nop,nop,TS val 47245923 ecr 47245923], length 0
+1335107159.817133 IP bilbo-netbook.48039 > router.domain: 21688+ A? upload.wikimedia.org. (38)
+1335107159.817324 IP bilbo-netbook.37312 > router.domain: 57246+ A? upload.wikimedia.org. (38)
+1335107159.821466 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44619: Flags [S.], seq 3938980831, ack 60912951, win 5792, options [mss 1412,sackOK,TS val 1414801891 ecr 47245913], length 0
+1335107159.821617 IP bilbo-netbook.44619 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47245924 ecr 1414801891], length 0
+1335107159.821750 IP router.domain > bilbo-netbook.33971: 8980 1/0/0 PTR bits.esams.wikimedia.org. (83)
+1335107159.821904 IP bilbo-netbook.44619 > wikipedia-lb.esams.wikimedia.org.www: Flags [P.], seq 1:467, ack 1, win 5840, options [nop,nop,TS val 47245925 ecr 1414801891], length 466
+1335107159.840198 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [S.], seq 573961061, ack 64339923, win 5792, options [mss 1412,sackOK,TS val 207801280 ecr 47245915], length 0
+1335107159.840372 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47245929 ecr 207801280], length 0
+1335107159.840572 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [P.], seq 1:410, ack 1, win 5840, options [nop,nop,TS val 47245929 ecr 207801280], length 409
+1335107159.901339 IP router.domain > bilbo-netbook.48039: 21688 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (81)
+1335107159.901829 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [S], seq 75622636, win 5840, options [mss 1460,sackOK,TS val 47245944 ecr 0], length 0
+1335107159.902236 IP bilbo-netbook.50003 > router.domain: 33071+ PTR? 234.174.198.91.in-addr.arpa. (45)
+1335107159.909605 IP router.domain > bilbo-netbook.37312: 57246 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (81)
+1335107159.909934 IP bilbo-netbook.44724 > upload.esams.wikimedia.org.www: Flags [S], seq 75556900, win 5840, options [mss 1460,sackOK,TS val 47245947 ecr 0], length 0
+1335107159.918828 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44619: Flags [.], ack 467, win 6432, options [nop,nop,TS val 1414801901 ecr 47245925], length 0
+1335107159.921102 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44619: Flags [P.], seq 1:299, ack 467, win 6432, options [nop,nop,TS val 1414801901 ecr 47245925], length 298
+1335107159.921221 IP bilbo-netbook.44619 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 299, win 6432, options [nop,nop,TS val 47245949 ecr 1414801901], length 0
+1335107159.921543 IP localhost.8118 > localhost.41951: Flags [P.], seq 1:299, ack 520, win 33768, options [nop,nop,TS val 47245949 ecr 47245904], length 298
+1335107159.921567 IP localhost.41951 > localhost.8118: Flags [.], ack 299, win 32792, options [nop,nop,TS val 47245949 ecr 47245949], length 0
+1335107159.921618 IP bilbo-netbook.44619 > wikipedia-lb.esams.wikimedia.org.www: Flags [F.], seq 467, ack 299, win 6432, options [nop,nop,TS val 47245949 ecr 1414801901], length 0
+1335107159.921728 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44619: Flags [F.], seq 299, ack 467, win 6432, options [nop,nop,TS val 1414801901 ecr 47245925], length 0
+1335107159.921806 IP localhost.8118 > localhost.41951: Flags [F.], seq 299, ack 520, win 33768, options [nop,nop,TS val 47245949 ecr 47245949], length 0
+1335107159.921846 IP bilbo-netbook.44619 > wikipedia-lb.esams.wikimedia.org.www: Flags [.], ack 300, win 6432, options [nop,nop,TS val 47245949 ecr 1414801901], length 0
+1335107159.933857 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [.], ack 410, win 6432, options [nop,nop,TS val 207801291 ecr 47245929], length 0
+1335107159.942886 IP localhost.41951 > localhost.8118: Flags [F.], seq 520, ack 300, win 32792, options [nop,nop,TS val 47245955 ecr 47245949], length 0
+1335107159.942978 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [.], seq 1:1401, ack 410, win 6432, options [nop,nop,TS val 207801291 ecr 47245929], length 1400
+1335107159.942979 IP localhost.8118 > localhost.41951: Flags [.], ack 521, win 33768, options [nop,nop,TS val 47245955 ecr 47245955], length 0
+1335107159.943080 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [.], ack 1401, win 8400, options [nop,nop,TS val 47245955 ecr 207801291], length 0
+1335107159.943373 IP localhost.41959 > localhost.8118: Flags [S], seq 68992727, win 32792, options [mss 16396,sackOK,TS val 47245955 ecr 0], length 0
+1335107159.943402 IP localhost.8118 > localhost.41959: Flags [S.], seq 62072900, ack 68992728, win 32768, options [mss 16396,sackOK,TS val 47245955 ecr 47245955], length 0
+1335107159.943431 IP localhost.41959 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47245955 ecr 47245955], length 0
+1335107159.944868 IP localhost.41959 > localhost.8118: Flags [P.], seq 1:476, ack 1, win 32792, options [nop,nop,TS val 47245955 ecr 47245955], length 475
+1335107159.944925 IP localhost.8118 > localhost.41959: Flags [.], ack 476, win 33768, options [nop,nop,TS val 47245955 ecr 47245955], length 0
+1335107159.945761 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [.], seq 1401:2801, ack 410, win 6432, options [nop,nop,TS val 207801291 ecr 47245929], length 1400
+1335107159.945870 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [.], ack 2801, win 11200, options [nop,nop,TS val 47245955 ecr 207801291], length 0
+1335107159.946113 IP bilbo-netbook.59897 > router.domain: 50147+ A? upload.wikimedia.org. (38)
+1335107159.946872 IP router.domain > bilbo-netbook.59897: 50147 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107159.947133 IP bilbo-netbook.44726 > upload.esams.wikimedia.org.www: Flags [S], seq 63921339, win 5840, options [mss 1460,sackOK,TS val 47245956 ecr 0], length 0
+1335107160.012446 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [.], seq 2801:4201, ack 410, win 6432, options [nop,nop,TS val 207801291 ecr 47245929], length 1400
+1335107160.012567 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [.], ack 4201, win 14000, options [nop,nop,TS val 47245972 ecr 207801291], length 0
+1335107160.014537 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [P.], seq 4201:5236, ack 410, win 6432, options [nop,nop,TS val 207801291 ecr 47245929], length 1035
+1335107160.014649 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [.], ack 5236, win 16800, options [nop,nop,TS val 47245973 ecr 207801291], length 0
+1335107160.015804 IP localhost.8118 > localhost.41952: Flags [P.], seq 1:505, ack 465, win 33768, options [nop,nop,TS val 47245973 ecr 47245905], length 504
+1335107160.015842 IP localhost.41952 > localhost.8118: Flags [.], ack 505, win 33768, options [nop,nop,TS val 47245973 ecr 47245973], length 0
+1335107160.015910 IP localhost.8118 > localhost.41952: Flags [P.], seq 505:16778, ack 465, win 33768, options [nop,nop,TS val 47245973 ecr 47245973], length 16273
+1335107160.015932 IP localhost.41952 > localhost.8118: Flags [.], ack 16778, win 65092, options [nop,nop,TS val 47245973 ecr 47245973], length 0
+1335107160.015977 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [F.], seq 410, ack 5236, win 16800, options [nop,nop,TS val 47245973 ecr 207801291], length 0
+1335107160.016117 IP localhost.8118 > localhost.41952: Flags [F.], seq 16778, ack 465, win 33768, options [nop,nop,TS val 47245973 ecr 47245973], length 0
+1335107160.017525 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [F.], seq 5236, ack 410, win 6432, options [nop,nop,TS val 207801291 ecr 47245929], length 0
+1335107160.017636 IP bilbo-netbook.52035 > bits.esams.wikimedia.org.www: Flags [.], ack 5237, win 16800, options [nop,nop,TS val 47245973 ecr 207801291], length 0
+1335107160.019219 IP router.domain > bilbo-netbook.50003: 33071 1/0/0 PTR upload.esams.wikimedia.org. (85)
+1335107160.019616 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [S.], seq 92013917, ack 75622637, win 5792, options [mss 1412,sackOK,TS val 1631716055 ecr 47245944], length 0
+1335107160.019779 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47245974 ecr 1631716055], length 0
+1335107160.021758 IP upload.esams.wikimedia.org.www > bilbo-netbook.44724: Flags [S.], seq 3811856649, ack 75556901, win 5792, options [mss 1412,sackOK,TS val 1408438150 ecr 47245947], length 0
+1335107160.021871 IP bilbo-netbook.44724 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47245974 ecr 1408438150], length 0
+1335107160.022052 IP bilbo-netbook.44724 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:508, ack 1, win 5840, options [nop,nop,TS val 47245975 ecr 1408438150], length 507
+1335107160.022237 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:415, ack 1, win 5840, options [nop,nop,TS val 47245975 ecr 1631716055], length 414
+1335107160.022753 IP wikipedia-lb.esams.wikimedia.org.www > bilbo-netbook.44619: Flags [.], ack 468, win 6432, options [nop,nop,TS val 1414801906 ecr 47245949], length 0
+1335107160.053964 IP localhost.41952 > localhost.8118: Flags [.], ack 16779, win 65092, options [nop,nop,TS val 47245983 ecr 47245973], length 0
+1335107160.054337 IP localhost.41952 > localhost.8118: Flags [F.], seq 465, ack 16779, win 65092, options [nop,nop,TS val 47245983 ecr 47245973], length 0
+1335107160.054390 IP localhost.8118 > localhost.41952: Flags [.], ack 466, win 33768, options [nop,nop,TS val 47245983 ecr 47245983], length 0
+1335107160.054655 IP localhost.41961 > localhost.8118: Flags [S], seq 75108085, win 32792, options [mss 16396,sackOK,TS val 47245983 ecr 0], length 0
+1335107160.054711 IP localhost.8118 > localhost.41961: Flags [S.], seq 70641046, ack 75108086, win 32768, options [mss 16396,sackOK,TS val 47245983 ecr 47245983], length 0
+1335107160.054745 IP localhost.41961 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47245983 ecr 47245983], length 0
+1335107160.063262 IP localhost.41961 > localhost.8118: Flags [P.], seq 1:562, ack 1, win 32792, options [nop,nop,TS val 47245985 ecr 47245983], length 561
+1335107160.063328 IP localhost.8118 > localhost.41961: Flags [.], ack 562, win 33660, options [nop,nop,TS val 47245985 ecr 47245985], length 0
+1335107160.064692 IP bilbo-netbook.48824 > router.domain: 3768+ A? upload.wikimedia.org. (38)
+1335107160.065534 IP router.domain > bilbo-netbook.48824: 3768 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107160.065950 IP bilbo-netbook.44728 > upload.esams.wikimedia.org.www: Flags [S], seq 64575965, win 5840, options [mss 1460,sackOK,TS val 47245986 ecr 0], length 0
+1335107160.080745 IP upload.esams.wikimedia.org.www > bilbo-netbook.44726: Flags [S.], seq 572325546, ack 63921340, win 5792, options [mss 1412,sackOK,TS val 1416428148 ecr 47245956], length 0
+1335107160.080896 IP bilbo-netbook.44726 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47245989 ecr 1416428148], length 0
+1335107160.081030 IP bilbo-netbook.44726 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:419, ack 1, win 5840, options [nop,nop,TS val 47245989 ecr 1416428148], length 418
+1335107160.091899 IP bits.esams.wikimedia.org.www > bilbo-netbook.52035: Flags [.], ack 411, win 6432, options [nop,nop,TS val 207801306 ecr 47245973], length 0
+1335107160.130222 IP upload.esams.wikimedia.org.www > bilbo-netbook.44724: Flags [.], ack 508, win 6432, options [nop,nop,TS val 1408438164 ecr 47245975], length 0
+1335107160.132219 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], ack 415, win 6432, options [nop,nop,TS val 1631716072 ecr 47245975], length 0
+1335107160.135047 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [P.], seq 1:476, ack 415, win 6432, options [nop,nop,TS val 1631716072 ecr 47245975], length 475
+1335107160.135175 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 476, win 6432, options [nop,nop,TS val 47246003 ecr 1631716072], length 0
+1335107160.135620 IP localhost.8118 > localhost.41956: Flags [P.], seq 1:476, ack 472, win 33768, options [nop,nop,TS val 47246003 ecr 47245923], length 475
+1335107160.135654 IP localhost.41956 > localhost.8118: Flags [.], ack 476, win 33768, options [nop,nop,TS val 47246003 ecr 47246003], length 0
+1335107160.137024 IP upload.esams.wikimedia.org.www > bilbo-netbook.44724: Flags [P.], seq 1:274, ack 508, win 6432, options [nop,nop,TS val 1408438166 ecr 47245975], length 273
+1335107160.137138 IP bilbo-netbook.44724 > upload.esams.wikimedia.org.www: Flags [.], ack 274, win 6432, options [nop,nop,TS val 47246003 ecr 1408438166], length 0
+1335107160.137493 IP localhost.8118 > localhost.41955: Flags [P.], seq 1:274, ack 565, win 33840, options [nop,nop,TS val 47246003 ecr 47245923], length 273
+1335107160.137526 IP localhost.41955 > localhost.8118: Flags [.], ack 274, win 32792, options [nop,nop,TS val 47246003 ecr 47246003], length 0
+1335107160.137579 IP bilbo-netbook.44724 > upload.esams.wikimedia.org.www: Flags [F.], seq 508, ack 274, win 6432, options [nop,nop,TS val 47246003 ecr 1408438166], length 0
+1335107160.137660 IP localhost.8118 > localhost.41955: Flags [F.], seq 274, ack 565, win 33840, options [nop,nop,TS val 47246003 ecr 47246003], length 0
+1335107160.143716 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 476:1876, ack 415, win 6432, options [nop,nop,TS val 1631716072 ecr 47245975], length 1400
+1335107160.143848 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 1876, win 9800, options [nop,nop,TS val 47246005 ecr 1631716072], length 0
+1335107160.144067 IP localhost.8118 > localhost.41956: Flags [P.], seq 476:1876, ack 472, win 33768, options [nop,nop,TS val 47246005 ecr 47246003], length 1400
+1335107160.144095 IP localhost.41956 > localhost.8118: Flags [.], ack 1876, win 36400, options [nop,nop,TS val 47246005 ecr 47246005], length 0
+1335107160.150283 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 1876:3276, ack 415, win 6432, options [nop,nop,TS val 1631716072 ecr 47245975], length 1400
+1335107160.150404 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 3276, win 12600, options [nop,nop,TS val 47246007 ecr 1631716072], length 0
+1335107160.150634 IP localhost.8118 > localhost.41956: Flags [P.], seq 1876:3276, ack 472, win 33768, options [nop,nop,TS val 47246007 ecr 47246005], length 1400
+1335107160.150665 IP localhost.41956 > localhost.8118: Flags [.], ack 3276, win 39200, options [nop,nop,TS val 47246007 ecr 47246007], length 0
+1335107160.157692 IP upload.esams.wikimedia.org.www > bilbo-netbook.44724: Flags [F.], seq 274, ack 508, win 6432, options [nop,nop,TS val 1408438166 ecr 47245975], length 0
+1335107160.157824 IP bilbo-netbook.44724 > upload.esams.wikimedia.org.www: Flags [.], ack 275, win 6432, options [nop,nop,TS val 47246008 ecr 1408438166], length 0
+1335107160.158626 IP upload.esams.wikimedia.org.www > bilbo-netbook.44728: Flags [S.], seq 17882093, ack 64575966, win 5792, options [mss 1412,sackOK,TS val 1631573082 ecr 47245986], length 0
+1335107160.158764 IP bilbo-netbook.44728 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246009 ecr 1631573082], length 0
+1335107160.158976 IP bilbo-netbook.44728 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:505, ack 1, win 5840, options [nop,nop,TS val 47246009 ecr 1631573082], length 504
+1335107160.173945 IP localhost.41955 > localhost.8118: Flags [.], ack 275, win 32792, options [nop,nop,TS val 47246013 ecr 47246003], length 0
+1335107160.181254 IP localhost.41955 > localhost.8118: Flags [F.], seq 565, ack 275, win 32792, options [nop,nop,TS val 47246014 ecr 47246003], length 0
+1335107160.181295 IP localhost.8118 > localhost.41955: Flags [.], ack 566, win 33840, options [nop,nop,TS val 47246014 ecr 47246014], length 0
+1335107160.181470 IP localhost.41963 > localhost.8118: Flags [S], seq 66007266, win 32792, options [mss 16396,sackOK,TS val 47246014 ecr 0], length 0
+1335107160.181501 IP localhost.8118 > localhost.41963: Flags [S.], seq 68559333, ack 66007267, win 32768, options [mss 16396,sackOK,TS val 47246014 ecr 47246014], length 0
+1335107160.181527 IP localhost.41963 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246014 ecr 47246014], length 0
+1335107160.225334 IP upload.esams.wikimedia.org.www > bilbo-netbook.44726: Flags [.], ack 419, win 6432, options [nop,nop,TS val 1416428162 ecr 47245989], length 0
+1335107160.231377 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 3276:4676, ack 415, win 6432, options [nop,nop,TS val 1631716082 ecr 47246003], length 1400
+1335107160.231504 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 4676, win 15400, options [nop,nop,TS val 47246027 ecr 1631716082], length 0
+1335107160.231725 IP localhost.8118 > localhost.41956: Flags [P.], seq 3276:4676, ack 472, win 33768, options [nop,nop,TS val 47246027 ecr 47246007], length 1400
+1335107160.231752 IP localhost.41956 > localhost.8118: Flags [.], ack 4676, win 42000, options [nop,nop,TS val 47246027 ecr 47246027], length 0
+1335107160.266593 IP localhost.41963 > localhost.8118: Flags [P.], seq 1:500, ack 1, win 32792, options [nop,nop,TS val 47246036 ecr 47246014], length 499
+1335107160.266653 IP localhost.8118 > localhost.41963: Flags [.], ack 500, win 33768, options [nop,nop,TS val 47246036 ecr 47246036], length 0
+1335107160.267602 IP bilbo-netbook.51340 > router.domain: 9950+ A? upload.wikimedia.org. (38)
+1335107160.268139 IP localhost.41963 > localhost.8118: Flags [F.], seq 500, ack 1, win 32792, options [nop,nop,TS val 47246036 ecr 47246036], length 0
+1335107160.268410 IP router.domain > bilbo-netbook.51340: 9950 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107160.268815 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [S], seq 76007995, win 5840, options [mss 1460,sackOK,TS val 47246036 ecr 0], length 0
+1335107160.270494 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 4676:6076, ack 415, win 6432, options [nop,nop,TS val 1631716082 ecr 47246003], length 1400
+1335107160.270611 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 6076, win 18200, options [nop,nop,TS val 47246037 ecr 1631716082], length 0
+1335107160.270824 IP localhost.8118 > localhost.41956: Flags [P.], seq 4676:6076, ack 472, win 33768, options [nop,nop,TS val 47246037 ecr 47246027], length 1400
+1335107160.270859 IP localhost.41956 > localhost.8118: Flags [.], ack 6076, win 44800, options [nop,nop,TS val 47246037 ecr 47246037], length 0
+1335107160.271624 IP upload.esams.wikimedia.org.www > bilbo-netbook.44726: Flags [P.], seq 1:475, ack 419, win 6432, options [nop,nop,TS val 1416428162 ecr 47245989], length 474
+1335107160.271737 IP bilbo-netbook.44726 > upload.esams.wikimedia.org.www: Flags [.], ack 475, win 6432, options [nop,nop,TS val 47246037 ecr 1416428162], length 0
+1335107160.272085 IP localhost.8118 > localhost.41959: Flags [P.], seq 1:475, ack 476, win 33768, options [nop,nop,TS val 47246037 ecr 47245955], length 474
+1335107160.272120 IP localhost.41959 > localhost.8118: Flags [.], ack 475, win 33768, options [nop,nop,TS val 47246037 ecr 47246037], length 0
+1335107160.279035 IP upload.esams.wikimedia.org.www > bilbo-netbook.44726: Flags [P.], seq 475:981, ack 419, win 6432, options [nop,nop,TS val 1416428162 ecr 47245989], length 506
+1335107160.279174 IP bilbo-netbook.44726 > upload.esams.wikimedia.org.www: Flags [.], ack 981, win 7504, options [nop,nop,TS val 47246038 ecr 1416428162], length 0
+1335107160.279506 IP localhost.8118 > localhost.41959: Flags [P.], seq 475:981, ack 476, win 33768, options [nop,nop,TS val 47246039 ecr 47246037], length 506
+1335107160.279548 IP localhost.41959 > localhost.8118: Flags [.], ack 981, win 34840, options [nop,nop,TS val 47246039 ecr 47246039], length 0
+1335107160.279606 IP bilbo-netbook.44726 > upload.esams.wikimedia.org.www: Flags [F.], seq 419, ack 981, win 7504, options [nop,nop,TS val 47246039 ecr 1416428162], length 0
+1335107160.279687 IP localhost.8118 > localhost.41959: Flags [F.], seq 981, ack 476, win 33768, options [nop,nop,TS val 47246039 ecr 47246039], length 0
+1335107160.283121 IP localhost.41959 > localhost.8118: Flags [F.], seq 476, ack 982, win 34840, options [nop,nop,TS val 47246039 ecr 47246039], length 0
+1335107160.283180 IP localhost.8118 > localhost.41959: Flags [.], ack 477, win 33768, options [nop,nop,TS val 47246039 ecr 47246039], length 0
+1335107160.283418 IP localhost.41965 > localhost.8118: Flags [S], seq 75303753, win 32792, options [mss 16396,sackOK,TS val 47246040 ecr 0], length 0
+1335107160.283461 IP localhost.8118 > localhost.41965: Flags [S.], seq 82018873, ack 75303754, win 32768, options [mss 16396,sackOK,TS val 47246040 ecr 47246040], length 0
+1335107160.283491 IP localhost.41965 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246040 ecr 47246040], length 0
+1335107160.284772 IP localhost.41965 > localhost.8118: Flags [P.], seq 1:506, ack 1, win 32792, options [nop,nop,TS val 47246040 ecr 47246040], length 505
+1335107160.284833 IP localhost.8118 > localhost.41965: Flags [.], ack 506, win 33768, options [nop,nop,TS val 47246040 ecr 47246040], length 0
+1335107160.285647 IP bilbo-netbook.34711 > router.domain: 14613+ A? upload.wikimedia.org. (38)
+1335107160.286490 IP router.domain > bilbo-netbook.34711: 14613 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107160.287010 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [S], seq 75303918, win 5840, options [mss 1460,sackOK,TS val 47246041 ecr 0], length 0
+1335107160.288742 IP upload.esams.wikimedia.org.www > bilbo-netbook.44726: Flags [F.], seq 981, ack 419, win 6432, options [nop,nop,TS val 1416428162 ecr 47245989], length 0
+1335107160.288880 IP bilbo-netbook.44726 > upload.esams.wikimedia.org.www: Flags [.], ack 982, win 7504, options [nop,nop,TS val 47246041 ecr 1416428162], length 0
+1335107160.290230 IP upload.esams.wikimedia.org.www > bilbo-netbook.44724: Flags [.], ack 509, win 6432, options [nop,nop,TS val 1408438176 ecr 47246003], length 0
+1335107160.294886 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 6076:7476, ack 415, win 6432, options [nop,nop,TS val 1631716083 ecr 47246005], length 1400
+1335107160.295025 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 7476, win 21000, options [nop,nop,TS val 47246042 ecr 1631716083], length 0
+1335107160.295250 IP localhost.8118 > localhost.41956: Flags [P.], seq 6076:7476, ack 472, win 33768, options [nop,nop,TS val 47246042 ecr 47246037], length 1400
+1335107160.295279 IP localhost.41956 > localhost.8118: Flags [.], ack 7476, win 47600, options [nop,nop,TS val 47246042 ecr 47246042], length 0
+1335107160.303614 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 7476:8876, ack 415, win 6432, options [nop,nop,TS val 1631716083 ecr 47246005], length 1400
+1335107160.303743 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 8876, win 23800, options [nop,nop,TS val 47246045 ecr 1631716083], length 0
+1335107160.303961 IP localhost.8118 > localhost.41956: Flags [P.], seq 7476:8876, ack 472, win 33768, options [nop,nop,TS val 47246045 ecr 47246042], length 1400
+1335107160.303992 IP localhost.41956 > localhost.8118: Flags [.], ack 8876, win 50400, options [nop,nop,TS val 47246045 ecr 47246045], length 0
+1335107160.305928 IP localhost.8118 > localhost.41963: Flags [.], ack 501, win 33768, options [nop,nop,TS val 47246046 ecr 47246036], length 0
+1335107160.372950 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 8876:10276, ack 415, win 6432, options [nop,nop,TS val 1631716084 ecr 47246007], length 1400
+1335107160.373083 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 10276, win 26600, options [nop,nop,TS val 47246062 ecr 1631716084], length 0
+1335107160.373297 IP localhost.8118 > localhost.41956: Flags [P.], seq 8876:10276, ack 472, win 33768, options [nop,nop,TS val 47246062 ecr 47246045], length 1400
+1335107160.373322 IP localhost.41956 > localhost.8118: Flags [.], ack 10276, win 53200, options [nop,nop,TS val 47246062 ecr 47246062], length 0
+1335107160.407528 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [P.], seq 10276:11676, ack 415, win 6432, options [nop,nop,TS val 1631716084 ecr 47246007], length 1400
+1335107160.407663 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 11676, win 29400, options [nop,nop,TS val 47246071 ecr 1631716084], length 0
+1335107160.407862 IP localhost.8118 > localhost.41956: Flags [P.], seq 10276:11676, ack 472, win 33768, options [nop,nop,TS val 47246071 ecr 47246062], length 1400
+1335107160.407892 IP localhost.41956 > localhost.8118: Flags [.], ack 11676, win 56000, options [nop,nop,TS val 47246071 ecr 47246071], length 0
+1335107160.446089 IP upload.esams.wikimedia.org.www > bilbo-netbook.44728: Flags [.], ack 505, win 6432, options [nop,nop,TS val 1631573095 ecr 47246009], length 0
+1335107160.448171 IP upload.esams.wikimedia.org.www > bilbo-netbook.44728: Flags [P.], seq 1:401, ack 505, win 6432, options [nop,nop,TS val 1631573095 ecr 47246009], length 400
+1335107160.448289 IP bilbo-netbook.44728 > upload.esams.wikimedia.org.www: Flags [.], ack 401, win 6432, options [nop,nop,TS val 47246081 ecr 1631573095], length 0
+1335107160.448740 IP localhost.8118 > localhost.41961: Flags [P.], seq 1:401, ack 562, win 33660, options [nop,nop,TS val 47246081 ecr 47245985], length 400
+1335107160.448797 IP localhost.41961 > localhost.8118: Flags [.], ack 401, win 33768, options [nop,nop,TS val 47246081 ecr 47246081], length 0
+1335107160.449029 IP bilbo-netbook.44728 > upload.esams.wikimedia.org.www: Flags [F.], seq 505, ack 401, win 6432, options [nop,nop,TS val 47246081 ecr 1631573095], length 0
+1335107160.449209 IP localhost.8118 > localhost.41961: Flags [F.], seq 401, ack 562, win 33660, options [nop,nop,TS val 47246081 ecr 47246081], length 0
+1335107160.450047 IP upload.esams.wikimedia.org.www > bilbo-netbook.44728: Flags [F.], seq 401, ack 505, win 6432, options [nop,nop,TS val 1631573095 ecr 47246009], length 0
+1335107160.450195 IP bilbo-netbook.44728 > upload.esams.wikimedia.org.www: Flags [.], ack 402, win 6432, options [nop,nop,TS val 47246082 ecr 1631573095], length 0
+1335107160.474267 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 11676:13076, ack 415, win 6432, options [nop,nop,TS val 1631716087 ecr 47246027], length 1400
+1335107160.474420 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 13076, win 32200, options [nop,nop,TS val 47246088 ecr 1631716087], length 0
+1335107160.474647 IP localhost.8118 > localhost.41956: Flags [P.], seq 11676:13076, ack 472, win 33768, options [nop,nop,TS val 47246088 ecr 47246071], length 1400
+1335107160.474684 IP localhost.41956 > localhost.8118: Flags [.], ack 13076, win 58800, options [nop,nop,TS val 47246088 ecr 47246088], length 0
+1335107160.480843 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 13076:14476, ack 415, win 6432, options [nop,nop,TS val 1631716087 ecr 47246027], length 1400
+1335107160.480996 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 14476, win 35000, options [nop,nop,TS val 47246089 ecr 1631716087], length 0
+1335107160.481205 IP localhost.8118 > localhost.41956: Flags [P.], seq 13076:14476, ack 472, win 33768, options [nop,nop,TS val 47246089 ecr 47246088], length 1400
+1335107160.481230 IP localhost.41956 > localhost.8118: Flags [.], ack 14476, win 61600, options [nop,nop,TS val 47246089 ecr 47246089], length 0
+1335107160.486438 IP localhost.41961 > localhost.8118: Flags [.], ack 402, win 33768, options [nop,nop,TS val 47246091 ecr 47246081], length 0
+1335107160.507621 IP localhost.41961 > localhost.8118: Flags [F.], seq 562, ack 402, win 33768, options [nop,nop,TS val 47246096 ecr 47246081], length 0
+1335107160.507683 IP localhost.8118 > localhost.41961: Flags [.], ack 563, win 33660, options [nop,nop,TS val 47246096 ecr 47246096], length 0
+1335107160.507975 IP localhost.41967 > localhost.8118: Flags [S], seq 85215609, win 32792, options [mss 16396,sackOK,TS val 47246096 ecr 0], length 0
+1335107160.508024 IP localhost.8118 > localhost.41967: Flags [S.], seq 74973561, ack 85215610, win 32768, options [mss 16396,sackOK,TS val 47246096 ecr 47246096], length 0
+1335107160.508068 IP localhost.41967 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246096 ecr 47246096], length 0
+1335107160.508552 IP localhost.41968 > localhost.8118: Flags [S], seq 80526707, win 32792, options [mss 16396,sackOK,TS val 47246096 ecr 0], length 0
+1335107160.508610 IP localhost.8118 > localhost.41968: Flags [S.], seq 83229603, ack 80526708, win 32768, options [mss 16396,sackOK,TS val 47246096 ecr 47246096], length 0
+1335107160.508654 IP localhost.41968 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246096 ecr 47246096], length 0
+1335107160.510199 IP upload.esams.wikimedia.org.www > bilbo-netbook.44730: Flags [S.], seq 4195093810, ack 76007996, win 5792, options [mss 1412,sackOK,TS val 1631349105 ecr 47246036], length 0
+1335107160.510358 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246096 ecr 1631349105], length 0
+1335107160.510560 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:443, ack 1, win 5840, options [nop,nop,TS val 47246097 ecr 1631349105], length 442
+1335107160.510692 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [F.], seq 443, ack 1, win 5840, options [nop,nop,TS val 47246097 ecr 1631349105], length 0
+1335107160.510778 IP localhost.8118 > localhost.41963: Flags [F.], seq 1, ack 501, win 33768, options [nop,nop,TS val 47246097 ecr 47246036], length 0
+1335107160.510809 IP localhost.41963 > localhost.8118: Flags [.], ack 2, win 32792, options [nop,nop,TS val 47246097 ecr 47246097], length 0
+1335107160.516882 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 14476:15876, ack 415, win 6432, options [nop,nop,TS val 1631716106 ecr 47246037], length 1400
+1335107160.517048 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 15876, win 37800, options [nop,nop,TS val 47246098 ecr 1631716106], length 0
+1335107160.517291 IP localhost.8118 > localhost.41956: Flags [P.], seq 14476:15876, ack 472, win 33768, options [nop,nop,TS val 47246098 ecr 47246089], length 1400
+1335107160.517320 IP localhost.41956 > localhost.8118: Flags [.], ack 15876, win 64400, options [nop,nop,TS val 47246098 ecr 47246098], length 0
+1335107160.523391 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 15876:17276, ack 415, win 6432, options [nop,nop,TS val 1631716106 ecr 47246037], length 1400
+1335107160.523646 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 17276, win 40600, options [nop,nop,TS val 47246100 ecr 1631716106], length 0
+1335107160.524001 IP localhost.8118 > localhost.41956: Flags [P.], seq 15876:17276, ack 472, win 33768, options [nop,nop,TS val 47246100 ecr 47246098], length 1400
+1335107160.524050 IP localhost.41956 > localhost.8118: Flags [.], ack 17276, win 64400, options [nop,nop,TS val 47246100 ecr 47246100], length 0
+1335107160.553713 IP localhost.41967 > localhost.8118: Flags [P.], seq 1:506, ack 1, win 32792, options [nop,nop,TS val 47246107 ecr 47246096], length 505
+1335107160.553809 IP localhost.8118 > localhost.41967: Flags [.], ack 506, win 33768, options [nop,nop,TS val 47246107 ecr 47246107], length 0
+1335107160.554060 IP localhost.41968 > localhost.8118: Flags [P.], seq 1:510, ack 1, win 32792, options [nop,nop,TS val 47246108 ecr 47246096], length 509
+1335107160.554119 IP localhost.8118 > localhost.41968: Flags [.], ack 510, win 33768, options [nop,nop,TS val 47246108 ecr 47246108], length 0
+1335107160.555070 IP bilbo-netbook.54949 > router.domain: 46223+ A? upload.wikimedia.org. (38)
+1335107160.555311 IP bilbo-netbook.45437 > router.domain: 60344+ A? upload.wikimedia.org. (38)
+1335107160.556033 IP router.domain > bilbo-netbook.54949: 46223 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107160.556472 IP router.domain > bilbo-netbook.45437: 60344 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107160.556620 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [S], seq 71871661, win 5840, options [mss 1460,sackOK,TS val 47246108 ecr 0], length 0
+1335107160.556955 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [S], seq 74258945, win 5840, options [mss 1460,sackOK,TS val 47246108 ecr 0], length 0
+1335107160.579847 IP upload.esams.wikimedia.org.www > bilbo-netbook.44726: Flags [.], ack 420, win 6432, options [nop,nop,TS val 1416428197 ecr 47246039], length 0
+1335107160.582685 IP upload.esams.wikimedia.org.www > bilbo-netbook.44732: Flags [S.], seq 473326595, ack 75303919, win 5792, options [mss 1412,sackOK,TS val 1416934293 ecr 47246041], length 0
+1335107160.582816 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246115 ecr 1416934293], length 0
+1335107160.583142 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:449, ack 1, win 5840, options [nop,nop,TS val 47246115 ecr 1416934293], length 448
+1335107160.596198 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 17276:18676, ack 415, win 6432, options [nop,nop,TS val 1631716119 ecr 47246042], length 1400
+1335107160.596323 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 18676, win 43400, options [nop,nop,TS val 47246118 ecr 1631716119], length 0
+1335107160.596551 IP localhost.8118 > localhost.41956: Flags [P.], seq 17276:18676, ack 472, win 33768, options [nop,nop,TS val 47246118 ecr 47246100], length 1400
+1335107160.596579 IP localhost.41956 > localhost.8118: Flags [.], ack 18676, win 64400, options [nop,nop,TS val 47246118 ecr 47246118], length 0
+1335107160.602693 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [P.], seq 18676:20076, ack 415, win 6432, options [nop,nop,TS val 1631716119 ecr 47246042], length 1400
+1335107160.602811 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 20076, win 46200, options [nop,nop,TS val 47246120 ecr 1631716119], length 0
+1335107160.603050 IP localhost.8118 > localhost.41956: Flags [P.], seq 18676:20076, ack 472, win 33768, options [nop,nop,TS val 47246120 ecr 47246118], length 1400
+1335107160.603086 IP localhost.41956 > localhost.8118: Flags [.], ack 20076, win 64400, options [nop,nop,TS val 47246120 ecr 47246120], length 0
+1335107160.726286 IP upload.esams.wikimedia.org.www > bilbo-netbook.44728: Flags [P.], seq 1:401, ack 505, win 6432, options [nop,nop,TS val 1631573128 ecr 47246009], length 400
+1335107160.726406 IP bilbo-netbook.44728 > upload.esams.wikimedia.org.www: Flags [.], ack 402, win 6432, options [nop,nop,TS val 47246151 ecr 1631573095,nop,nop,sack 1 {1:401}], length 0
+1335107160.732860 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 20076:21476, ack 415, win 6432, options [nop,nop,TS val 1631716119 ecr 47246045], length 1400
+1335107160.732990 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 21476, win 49000, options [nop,nop,TS val 47246152 ecr 1631716119], length 0
+1335107160.733225 IP localhost.8118 > localhost.41956: Flags [P.], seq 20076:21476, ack 472, win 33768, options [nop,nop,TS val 47246152 ecr 47246120], length 1400
+1335107160.733253 IP localhost.41956 > localhost.8118: Flags [.], ack 21476, win 64400, options [nop,nop,TS val 47246152 ecr 47246152], length 0
+1335107160.769118 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 21476:22876, ack 415, win 6432, options [nop,nop,TS val 1631716119 ecr 47246045], length 1400
+1335107160.769248 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 22876, win 53200, options [nop,nop,TS val 47246161 ecr 1631716119], length 0
+1335107160.769486 IP localhost.8118 > localhost.41956: Flags [P.], seq 21476:22876, ack 472, win 33768, options [nop,nop,TS val 47246161 ecr 47246152], length 1400
+1335107160.769525 IP localhost.41956 > localhost.8118: Flags [.], ack 22876, win 64400, options [nop,nop,TS val 47246161 ecr 47246161], length 0
+1335107160.790720 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 22876:24276, ack 415, win 6432, options [nop,nop,TS val 1631716120 ecr 47246062], length 1400
+1335107160.790857 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 24276, win 56000, options [nop,nop,TS val 47246167 ecr 1631716120], length 0
+1335107160.791079 IP localhost.8118 > localhost.41956: Flags [P.], seq 22876:24276, ack 472, win 33768, options [nop,nop,TS val 47246167 ecr 47246161], length 1400
+1335107160.791115 IP localhost.41956 > localhost.8118: Flags [.], ack 24276, win 64400, options [nop,nop,TS val 47246167 ecr 47246167], length 0
+1335107160.797306 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 24276:25676, ack 415, win 6432, options [nop,nop,TS val 1631716120 ecr 47246062], length 1400
+1335107160.797428 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 25676, win 58800, options [nop,nop,TS val 47246168 ecr 1631716120], length 0
+1335107160.797656 IP localhost.8118 > localhost.41956: Flags [P.], seq 24276:25676, ack 472, win 33768, options [nop,nop,TS val 47246168 ecr 47246167], length 1400
+1335107160.797683 IP localhost.41956 > localhost.8118: Flags [.], ack 25676, win 64400, options [nop,nop,TS val 47246168 ecr 47246168], length 0
+1335107160.804873 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 25676:27076, ack 415, win 6432, options [nop,nop,TS val 1631716120 ecr 47246071], length 1400
+1335107160.804984 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 27076, win 61600, options [nop,nop,TS val 47246170 ecr 1631716120], length 0
+1335107160.805216 IP localhost.8118 > localhost.41956: Flags [P.], seq 25676:27076, ack 472, win 33768, options [nop,nop,TS val 47246170 ecr 47246168], length 1400
+1335107160.805242 IP localhost.41956 > localhost.8118: Flags [.], ack 27076, win 64400, options [nop,nop,TS val 47246170 ecr 47246170], length 0
+1335107160.811360 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [P.], seq 27076:28476, ack 415, win 6432, options [nop,nop,TS val 1631716120 ecr 47246071], length 1400
+1335107160.811499 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 28476, win 63000, options [nop,nop,TS val 47246172 ecr 1631716120], length 0
+1335107160.811711 IP localhost.8118 > localhost.41956: Flags [P.], seq 27076:28476, ack 472, win 33768, options [nop,nop,TS val 47246172 ecr 47246170], length 1400
+1335107160.811749 IP localhost.41956 > localhost.8118: Flags [.], ack 28476, win 64400, options [nop,nop,TS val 47246172 ecr 47246172], length 0
+1335107160.812125 IP upload.esams.wikimedia.org.www > bilbo-netbook.44728: Flags [.], ack 506, win 6432, options [nop,nop,TS val 1631573130 ecr 47246081], length 0
+1335107160.825340 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 28476:29876, ack 415, win 6432, options [nop,nop,TS val 1631716122 ecr 47246088], length 1400
+1335107160.825464 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 29876, win 63000, options [nop,nop,TS val 47246175 ecr 1631716122], length 0
+1335107160.825688 IP localhost.8118 > localhost.41956: Flags [P.], seq 28476:29876, ack 472, win 33768, options [nop,nop,TS val 47246175 ecr 47246172], length 1400
+1335107160.825715 IP localhost.41956 > localhost.8118: Flags [.], ack 29876, win 64400, options [nop,nop,TS val 47246175 ecr 47246175], length 0
+1335107160.831908 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 29876:31276, ack 415, win 6432, options [nop,nop,TS val 1631716122 ecr 47246088], length 1400
+1335107160.832036 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 31276, win 63000, options [nop,nop,TS val 47246177 ecr 1631716122], length 0
+1335107160.832279 IP localhost.8118 > localhost.41956: Flags [P.], seq 29876:31276, ack 472, win 33768, options [nop,nop,TS val 47246177 ecr 47246175], length 1400
+1335107160.832316 IP localhost.41956 > localhost.8118: Flags [.], ack 31276, win 64400, options [nop,nop,TS val 47246177 ecr 47246177], length 0
+1335107160.838341 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 31276:32676, ack 415, win 6432, options [nop,nop,TS val 1631716123 ecr 47246089], length 1400
+1335107160.838458 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 32676, win 63000, options [nop,nop,TS val 47246179 ecr 1631716123], length 0
+1335107160.838652 IP localhost.8118 > localhost.41956: Flags [P.], seq 31276:32676, ack 472, win 33768, options [nop,nop,TS val 47246179 ecr 47246177], length 1400
+1335107160.838677 IP localhost.41956 > localhost.8118: Flags [.], ack 32676, win 64400, options [nop,nop,TS val 47246179 ecr 47246179], length 0
+1335107160.844930 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 32676:34076, ack 415, win 6432, options [nop,nop,TS val 1631716123 ecr 47246089], length 1400
+1335107160.845046 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 34076, win 63000, options [nop,nop,TS val 47246180 ecr 1631716123], length 0
+1335107160.845271 IP localhost.8118 > localhost.41956: Flags [P.], seq 32676:34076, ack 472, win 33768, options [nop,nop,TS val 47246180 ecr 47246179], length 1400
+1335107160.845297 IP localhost.41956 > localhost.8118: Flags [.], ack 34076, win 64400, options [nop,nop,TS val 47246180 ecr 47246180], length 0
+1335107160.853086 IP upload.esams.wikimedia.org.www > bilbo-netbook.44730: Flags [.], ack 443, win 6432, options [nop,nop,TS val 1631349141 ecr 47246097], length 0
+1335107160.854288 IP upload.esams.wikimedia.org.www > bilbo-netbook.44730: Flags [P.], seq 1:433, ack 443, win 6432, options [nop,nop,TS val 1631349141 ecr 47246097], length 432
+1335107160.854424 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [R], seq 76008438, win 0, length 0
+1335107160.908989 IP upload.esams.wikimedia.org.www > bilbo-netbook.44730: Flags [.], seq 433:1833, ack 443, win 6432, options [nop,nop,TS val 1631349141 ecr 47246097], length 1400
+1335107160.909112 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [R], seq 76008438, win 0, length 0
+1335107160.910785 IP upload.esams.wikimedia.org.www > bilbo-netbook.44730: Flags [P.], seq 1833:2663, ack 443, win 6432, options [nop,nop,TS val 1631349141 ecr 47246097], length 830
+1335107160.910896 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [R], seq 76008438, win 0, length 0
+1335107160.911392 IP upload.esams.wikimedia.org.www > bilbo-netbook.44730: Flags [F.], seq 2663, ack 443, win 6432, options [nop,nop,TS val 1631349141 ecr 47246097], length 0
+1335107160.911504 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [R], seq 76008438, win 0, length 0
+1335107160.913532 IP upload.esams.wikimedia.org.www > bilbo-netbook.44730: Flags [.], ack 444, win 6432, options [nop,nop,TS val 1631349142 ecr 47246097], length 0
+1335107160.913671 IP bilbo-netbook.44730 > upload.esams.wikimedia.org.www: Flags [R], seq 76008439, win 0, length 0
+1335107160.919152 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 34076:35476, ack 415, win 6432, options [nop,nop,TS val 1631716128 ecr 47246098], length 1400
+1335107160.919363 IP localhost.8118 > localhost.41956: Flags [P.], seq 34076:35476, ack 472, win 33768, options [nop,nop,TS val 47246199 ecr 47246180], length 1400
+1335107160.919391 IP localhost.41956 > localhost.8118: Flags [.], ack 35476, win 64400, options [nop,nop,TS val 47246199 ecr 47246199], length 0
+1335107160.921887 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [P.], seq 35476:36876, ack 415, win 6432, options [nop,nop,TS val 1631716128 ecr 47246098], length 1400
+1335107160.922018 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 36876, win 63000, options [nop,nop,TS val 47246200 ecr 1631716128], length 0
+1335107160.922159 IP localhost.8118 > localhost.41956: Flags [P.], seq 35476:36876, ack 472, win 33768, options [nop,nop,TS val 47246200 ecr 47246199], length 1400
+1335107160.922185 IP localhost.41956 > localhost.8118: Flags [.], ack 36876, win 64400, options [nop,nop,TS val 47246200 ecr 47246200], length 0
+1335107160.926260 IP upload.esams.wikimedia.org.www > bilbo-netbook.44735: Flags [S.], seq 558436349, ack 71871662, win 5792, options [mss 1412,sackOK,TS val 1416921095 ecr 47246108], length 0
+1335107160.926402 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246201 ecr 1416921095], length 0
+1335107160.926547 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:449, ack 1, win 5840, options [nop,nop,TS val 47246201 ecr 1416921095], length 448
+1335107160.927613 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [S.], seq 3349877832, ack 74258946, win 5792, options [mss 1412,sackOK,TS val 1416934306 ecr 47246108], length 0
+1335107160.927741 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246201 ecr 1416934306], length 0
+1335107160.927859 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:453, ack 1, win 5840, options [nop,nop,TS val 47246201 ecr 1416934306], length 452
+1335107160.928385 IP upload.esams.wikimedia.org.www > bilbo-netbook.44732: Flags [.], ack 449, win 6432, options [nop,nop,TS val 1416934309 ecr 47246115], length 0
+1335107160.960543 IP upload.esams.wikimedia.org.www > bilbo-netbook.44732: Flags [P.], seq 1:436, ack 449, win 6432, options [nop,nop,TS val 1416934309 ecr 47246115], length 435
+1335107160.960665 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [.], ack 436, win 6432, options [nop,nop,TS val 47246209 ecr 1416934309], length 0
+1335107160.961084 IP localhost.8118 > localhost.41965: Flags [P.], seq 1:436, ack 506, win 33768, options [nop,nop,TS val 47246209 ecr 47246040], length 435
+1335107160.961128 IP localhost.41965 > localhost.8118: Flags [.], ack 436, win 33768, options [nop,nop,TS val 47246209 ecr 47246209], length 0
+1335107160.966047 IP upload.esams.wikimedia.org.www > bilbo-netbook.44732: Flags [.], seq 436:1836, ack 449, win 6432, options [nop,nop,TS val 1416934309 ecr 47246115], length 1400
+1335107160.966165 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [.], ack 1836, win 9800, options [nop,nop,TS val 47246211 ecr 1416934309], length 0
+1335107160.966488 IP localhost.8118 > localhost.41965: Flags [P.], seq 436:1836, ack 506, win 33768, options [nop,nop,TS val 47246211 ecr 47246209], length 1400
+1335107160.966518 IP localhost.41965 > localhost.8118: Flags [.], ack 1836, win 36400, options [nop,nop,TS val 47246211 ecr 47246211], length 0
+1335107160.999533 IP upload.esams.wikimedia.org.www > bilbo-netbook.44732: Flags [P.], seq 1836:2367, ack 449, win 6432, options [nop,nop,TS val 1416934309 ecr 47246115], length 531
+1335107160.999664 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [.], ack 2367, win 12600, options [nop,nop,TS val 47246219 ecr 1416934309], length 0
+1335107160.999890 IP localhost.8118 > localhost.41965: Flags [P.], seq 1836:2367, ack 506, win 33768, options [nop,nop,TS val 47246219 ecr 47246211], length 531
+1335107160.999926 IP localhost.41965 > localhost.8118: Flags [.], ack 2367, win 39200, options [nop,nop,TS val 47246219 ecr 47246219], length 0
+1335107161.000015 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [F.], seq 449, ack 2367, win 12600, options [nop,nop,TS val 47246219 ecr 1416934309], length 0
+1335107161.000172 IP upload.esams.wikimedia.org.www > bilbo-netbook.44732: Flags [F.], seq 2367, ack 449, win 6432, options [nop,nop,TS val 1416934309 ecr 47246115], length 0
+1335107161.000253 IP localhost.8118 > localhost.41965: Flags [F.], seq 2367, ack 506, win 33768, options [nop,nop,TS val 47246219 ecr 47246219], length 0
+1335107161.000292 IP bilbo-netbook.44732 > upload.esams.wikimedia.org.www: Flags [.], ack 2368, win 12600, options [nop,nop,TS val 47246219 ecr 1416934309], length 0
+1335107161.002106 IP localhost.41965 > localhost.8118: Flags [F.], seq 506, ack 2368, win 39200, options [nop,nop,TS val 47246219 ecr 47246219], length 0
+1335107161.002176 IP localhost.8118 > localhost.41965: Flags [.], ack 507, win 33768, options [nop,nop,TS val 47246219 ecr 47246219], length 0
+1335107161.003079 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 36876:38276, ack 415, win 6432, options [nop,nop,TS val 1631716134 ecr 47246118], length 1400
+1335107161.003270 IP localhost.8118 > localhost.41956: Flags [P.], seq 36876:38276, ack 472, win 33768, options [nop,nop,TS val 47246220 ecr 47246200], length 1400
+1335107161.003296 IP localhost.41956 > localhost.8118: Flags [.], ack 38276, win 64400, options [nop,nop,TS val 47246220 ecr 47246220], length 0
+1335107161.005726 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 38276:39676, ack 415, win 6432, options [nop,nop,TS val 1631716134 ecr 47246118], length 1400
+1335107161.005842 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 39676, win 63000, options [nop,nop,TS val 47246220 ecr 1631716134], length 0
+1335107161.006044 IP localhost.8118 > localhost.41956: Flags [P.], seq 38276:39676, ack 472, win 33768, options [nop,nop,TS val 47246221 ecr 47246220], length 1400
+1335107161.006083 IP localhost.41956 > localhost.8118: Flags [.], ack 39676, win 64400, options [nop,nop,TS val 47246221 ecr 47246221], length 0
+1335107161.013390 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 39676:41076, ack 415, win 6432, options [nop,nop,TS val 1631716134 ecr 47246118], length 1400
+1335107161.013598 IP localhost.8118 > localhost.41956: Flags [P.], seq 39676:41076, ack 472, win 33768, options [nop,nop,TS val 47246222 ecr 47246221], length 1400
+1335107161.016040 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 41076:42476, ack 415, win 6432, options [nop,nop,TS val 1631716134 ecr 47246118], length 1400
+1335107161.016183 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 42476, win 63000, options [nop,nop,TS val 47246223 ecr 1631716134], length 0
+1335107161.024329 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 42476:43876, ack 415, win 6432, options [nop,nop,TS val 1631716134 ecr 47246120], length 1400
+1335107161.049963 IP localhost.41956 > localhost.8118: Flags [.], ack 41076, win 64400, options [nop,nop,TS val 47246232 ecr 47246222], length 0
+1335107161.050032 IP localhost.8118 > localhost.41956: Flags [P.], seq 41076:43876, ack 472, win 33768, options [nop,nop,TS val 47246232 ecr 47246232], length 2800
+1335107161.057934 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], seq 43876:45276, ack 415, win 6432, options [nop,nop,TS val 1631716134 ecr 47246120], length 1400
+1335107161.058056 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [.], ack 45276, win 63000, options [nop,nop,TS val 47246233 ecr 1631716134], length 0
+1335107161.059258 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [FP.], seq 45276:45759, ack 415, win 6432, options [nop,nop,TS val 1631716134 ecr 47246120], length 483
+1335107161.059459 IP bilbo-netbook.44723 > upload.esams.wikimedia.org.www: Flags [F.], seq 415, ack 45760, win 63000, options [nop,nop,TS val 47246234 ecr 1631716134], length 0
+1335107161.059601 IP localhost.8118 > localhost.41956: Flags [FP.], seq 43876:45759, ack 472, win 33768, options [nop,nop,TS val 47246234 ecr 47246232], length 1883
+1335107161.059665 IP localhost.41956 > localhost.8118: Flags [.], ack 45760, win 64400, options [nop,nop,TS val 47246234 ecr 47246232], length 0
+1335107161.060396 IP localhost.41956 > localhost.8118: Flags [F.], seq 472, ack 45760, win 64400, options [nop,nop,TS val 47246234 ecr 47246232], length 0
+1335107161.060450 IP localhost.8118 > localhost.41956: Flags [.], ack 473, win 33768, options [nop,nop,TS val 47246234 ecr 47246234], length 0
+1335107161.067794 IP upload.esams.wikimedia.org.www > bilbo-netbook.44735: Flags [.], ack 449, win 6432, options [nop,nop,TS val 1416921125 ecr 47246201], length 0
+1335107161.069046 IP upload.esams.wikimedia.org.www > bilbo-netbook.44735: Flags [P.], seq 1:436, ack 449, win 6432, options [nop,nop,TS val 1416921125 ecr 47246201], length 435
+1335107161.069153 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [.], ack 436, win 6432, options [nop,nop,TS val 47246236 ecr 1416921125], length 0
+1335107161.069539 IP localhost.8118 > localhost.41967: Flags [P.], seq 1:436, ack 506, win 33768, options [nop,nop,TS val 47246236 ecr 47246107], length 435
+1335107161.069582 IP localhost.41967 > localhost.8118: Flags [.], ack 436, win 33768, options [nop,nop,TS val 47246236 ecr 47246236], length 0
+1335107161.071873 IP upload.esams.wikimedia.org.www > bilbo-netbook.44735: Flags [.], seq 436:1836, ack 449, win 6432, options [nop,nop,TS val 1416921125 ecr 47246201], length 1400
+1335107161.072006 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [.], ack 1836, win 9800, options [nop,nop,TS val 47246237 ecr 1416921125], length 0
+1335107161.072207 IP localhost.8118 > localhost.41967: Flags [P.], seq 436:1836, ack 506, win 33768, options [nop,nop,TS val 47246237 ecr 47246236], length 1400
+1335107161.072234 IP localhost.41967 > localhost.8118: Flags [.], ack 1836, win 36400, options [nop,nop,TS val 47246237 ecr 47246237], length 0
+1335107161.078488 IP upload.esams.wikimedia.org.www > bilbo-netbook.44735: Flags [P.], seq 1836:2542, ack 449, win 6432, options [nop,nop,TS val 1416921125 ecr 47246201], length 706
+1335107161.078622 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [.], ack 2542, win 12600, options [nop,nop,TS val 47246239 ecr 1416921125], length 0
+1335107161.078831 IP localhost.8118 > localhost.41967: Flags [P.], seq 1836:2542, ack 506, win 33768, options [nop,nop,TS val 47246239 ecr 47246237], length 706
+1335107161.078858 IP localhost.41967 > localhost.8118: Flags [.], ack 2542, win 39200, options [nop,nop,TS val 47246239 ecr 47246239], length 0
+1335107161.078938 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [F.], seq 449, ack 2542, win 12600, options [nop,nop,TS val 47246239 ecr 1416921125], length 0
+1335107161.079034 IP localhost.8118 > localhost.41967: Flags [F.], seq 2542, ack 506, win 33768, options [nop,nop,TS val 47246239 ecr 47246239], length 0
+1335107161.079932 IP localhost.41967 > localhost.8118: Flags [F.], seq 506, ack 2543, win 39200, options [nop,nop,TS val 47246239 ecr 47246239], length 0
+1335107161.079997 IP localhost.8118 > localhost.41967: Flags [.], ack 507, win 33768, options [nop,nop,TS val 47246239 ecr 47246239], length 0
+1335107161.083218 IP localhost.41971 > localhost.8118: Flags [S], seq 88630980, win 32792, options [mss 16396,sackOK,TS val 47246240 ecr 0], length 0
+1335107161.083273 IP localhost.8118 > localhost.41971: Flags [S.], seq 80592363, ack 88630981, win 32768, options [mss 16396,sackOK,TS val 47246240 ecr 47246240], length 0
+1335107161.083317 IP localhost.41971 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246240 ecr 47246240], length 0
+1335107161.083842 IP localhost.41972 > localhost.8118: Flags [S], seq 92234947, win 32792, options [mss 16396,sackOK,TS val 47246240 ecr 0], length 0
+1335107161.083896 IP localhost.8118 > localhost.41972: Flags [S.], seq 85595916, ack 92234948, win 32768, options [mss 16396,sackOK,TS val 47246240 ecr 47246240], length 0
+1335107161.083940 IP localhost.41972 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246240 ecr 47246240], length 0
+1335107161.084185 IP upload.esams.wikimedia.org.www > bilbo-netbook.44735: Flags [F.], seq 2542, ack 449, win 6432, options [nop,nop,TS val 1416921125 ecr 47246201], length 0
+1335107161.084301 IP bilbo-netbook.44735 > upload.esams.wikimedia.org.www: Flags [.], ack 2543, win 12600, options [nop,nop,TS val 47246240 ecr 1416921125], length 0
+1335107161.084650 IP localhost.41973 > localhost.8118: Flags [S], seq 83198998, win 32792, options [mss 16396,sackOK,TS val 47246240 ecr 0], length 0
+1335107161.084690 IP localhost.8118 > localhost.41973: Flags [S.], seq 92427292, ack 83198999, win 32768, options [mss 16396,sackOK,TS val 47246240 ecr 47246240], length 0
+1335107161.084731 IP localhost.41973 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246240 ecr 47246240], length 0
+1335107161.085564 IP localhost.41971 > localhost.8118: Flags [P.], seq 1:508, ack 1, win 32792, options [nop,nop,TS val 47246240 ecr 47246240], length 507
+1335107161.085632 IP localhost.8118 > localhost.41971: Flags [.], ack 508, win 33768, options [nop,nop,TS val 47246240 ecr 47246240], length 0
+1335107161.085800 IP localhost.41972 > localhost.8118: Flags [P.], seq 1:510, ack 1, win 32792, options [nop,nop,TS val 47246240 ecr 47246240], length 509
+1335107161.085850 IP localhost.8118 > localhost.41972: Flags [.], ack 510, win 33768, options [nop,nop,TS val 47246240 ecr 47246240], length 0
+1335107161.086195 IP localhost.41973 > localhost.8118: Flags [P.], seq 1:502, ack 1, win 32792, options [nop,nop,TS val 47246241 ecr 47246240], length 501
+1335107161.086252 IP localhost.8118 > localhost.41973: Flags [.], ack 502, win 33768, options [nop,nop,TS val 47246241 ecr 47246241], length 0
+1335107161.086719 IP bilbo-netbook.44661 > router.domain: 51768+ A? upload.wikimedia.org. (38)
+1335107161.086999 IP bilbo-netbook.40446 > router.domain: 30350+ A? upload.wikimedia.org. (38)
+1335107161.087720 IP router.domain > bilbo-netbook.44661: 51768 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107161.088001 IP bilbo-netbook.47704 > router.domain: 57295+ A? upload.wikimedia.org. (38)
+1335107161.088076 IP router.domain > bilbo-netbook.40446: 30350 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107161.088273 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [S], seq 92423590, win 5840, options [mss 1460,sackOK,TS val 47246241 ecr 0], length 0
+1335107161.088611 IP bilbo-netbook.44741 > upload.esams.wikimedia.org.www: Flags [S], seq 87306926, win 5840, options [mss 1460,sackOK,TS val 47246241 ecr 0], length 0
+1335107161.089289 IP router.domain > bilbo-netbook.47704: 57295 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107161.089793 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [S], seq 82286718, win 5840, options [mss 1460,sackOK,TS val 47246241 ecr 0], length 0
+1335107161.090423 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [.], ack 453, win 6432, options [nop,nop,TS val 1416934337 ecr 47246201], length 0
+1335107161.094258 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [P.], seq 1:436, ack 453, win 6432, options [nop,nop,TS val 1416934337 ecr 47246201], length 435
+1335107161.094377 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [.], ack 436, win 6432, options [nop,nop,TS val 47246243 ecr 1416934337], length 0
+1335107161.094800 IP localhost.8118 > localhost.41968: Flags [P.], seq 1:436, ack 510, win 33768, options [nop,nop,TS val 47246243 ecr 47246108], length 435
+1335107161.094842 IP localhost.41968 > localhost.8118: Flags [.], ack 436, win 33768, options [nop,nop,TS val 47246243 ecr 47246243], length 0
+1335107161.104028 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [.], seq 436:1836, ack 453, win 6432, options [nop,nop,TS val 1416934337 ecr 47246201], length 1400
+1335107161.104159 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [.], ack 1836, win 9800, options [nop,nop,TS val 47246245 ecr 1416934337], length 0
+1335107161.104388 IP localhost.8118 > localhost.41968: Flags [P.], seq 436:1836, ack 510, win 33768, options [nop,nop,TS val 47246245 ecr 47246243], length 1400
+1335107161.104415 IP localhost.41968 > localhost.8118: Flags [.], ack 1836, win 36400, options [nop,nop,TS val 47246245 ecr 47246245], length 0
+1335107161.106815 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [.], seq 1836:3236, ack 453, win 6432, options [nop,nop,TS val 1416934337 ecr 47246201], length 1400
+1335107161.106937 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [.], ack 3236, win 12600, options [nop,nop,TS val 47246246 ecr 1416934337], length 0
+1335107161.107161 IP localhost.8118 > localhost.41968: Flags [P.], seq 1836:3236, ack 510, win 33768, options [nop,nop,TS val 47246246 ecr 47246245], length 1400
+1335107161.107188 IP localhost.41968 > localhost.8118: Flags [.], ack 3236, win 39200, options [nop,nop,TS val 47246246 ecr 47246246], length 0
+1335107161.110187 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [P.], seq 3236:3419, ack 453, win 6432, options [nop,nop,TS val 1416934337 ecr 47246201], length 183
+1335107161.110304 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [.], ack 3419, win 15400, options [nop,nop,TS val 47246247 ecr 1416934337], length 0
+1335107161.110511 IP localhost.8118 > localhost.41968: Flags [P.], seq 3236:3419, ack 510, win 33768, options [nop,nop,TS val 47246247 ecr 47246246], length 183
+1335107161.110536 IP localhost.41968 > localhost.8118: Flags [.], ack 3419, win 39200, options [nop,nop,TS val 47246247 ecr 47246247], length 0
+1335107161.110608 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [F.], seq 453, ack 3419, win 15400, options [nop,nop,TS val 47246247 ecr 1416934337], length 0
+1335107161.110702 IP localhost.8118 > localhost.41968: Flags [F.], seq 3419, ack 510, win 33768, options [nop,nop,TS val 47246247 ecr 47246247], length 0
+1335107161.111474 IP localhost.41968 > localhost.8118: Flags [F.], seq 510, ack 3420, win 39200, options [nop,nop,TS val 47246247 ecr 47246247], length 0
+1335107161.111537 IP localhost.8118 > localhost.41968: Flags [.], ack 511, win 33768, options [nop,nop,TS val 47246247 ecr 47246247], length 0
+1335107161.118584 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [F.], seq 3419, ack 453, win 6432, options [nop,nop,TS val 1416934337 ecr 47246201], length 0
+1335107161.118709 IP bilbo-netbook.44736 > upload.esams.wikimedia.org.www: Flags [.], ack 3420, win 15400, options [nop,nop,TS val 47246249 ecr 1416934337], length 0
+1335107161.121147 IP upload.esams.wikimedia.org.www > bilbo-netbook.44732: Flags [.], ack 450, win 6432, options [nop,nop,TS val 1416934343 ecr 47246219], length 0
+1335107161.122304 IP upload.esams.wikimedia.org.www > bilbo-netbook.44723: Flags [.], ack 416, win 6432, options [nop,nop,TS val 1631716170 ecr 47246234], length 0
+1335107161.140058 IP upload.esams.wikimedia.org.www > bilbo-netbook.44735: Flags [.], ack 450, win 6432, options [nop,nop,TS val 1416921138 ecr 47246239], length 0
+1335107161.173257 IP upload.esams.wikimedia.org.www > bilbo-netbook.44740: Flags [S.], seq 4204210849, ack 92423591, win 5792, options [mss 1412,sackOK,TS val 1631349190 ecr 47246241], length 0
+1335107161.173398 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246262 ecr 1631349190], length 0
+1335107161.173629 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:451, ack 1, win 5840, options [nop,nop,TS val 47246262 ecr 1631349190], length 450
+1335107161.187089 IP localhost.41977 > localhost.8118: Flags [S], seq 85079078, win 32792, options [mss 16396,sackOK,TS val 47246266 ecr 0], length 0
+1335107161.187156 IP localhost.8118 > localhost.41977: Flags [S.], seq 94128850, ack 85079079, win 32768, options [mss 16396,sackOK,TS val 47246266 ecr 47246266], length 0
+1335107161.187208 IP localhost.41977 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246266 ecr 47246266], length 0
+1335107161.188321 IP localhost.41977 > localhost.8118: Flags [P.], seq 1:526, ack 1, win 32792, options [nop,nop,TS val 47246266 ecr 47246266], length 525
+1335107161.188394 IP localhost.8118 > localhost.41977: Flags [.], ack 526, win 33768, options [nop,nop,TS val 47246266 ecr 47246266], length 0
+1335107161.189224 IP bilbo-netbook.54980 > router.domain: 11021+ A? upload.wikimedia.org. (38)
+1335107161.190033 IP router.domain > bilbo-netbook.54980: 11021 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107161.190363 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [S], seq 86891107, win 5840, options [mss 1460,sackOK,TS val 47246267 ecr 0], length 0
+1335107161.198047 IP upload.esams.wikimedia.org.www > bilbo-netbook.44741: Flags [S.], seq 86321016, ack 87306927, win 5792, options [mss 1412,sackOK,TS val 1631660800 ecr 47246241], length 0
+1335107161.198204 IP bilbo-netbook.44741 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246268 ecr 1631660800], length 0
+1335107161.198480 IP bilbo-netbook.44741 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:453, ack 1, win 5840, options [nop,nop,TS val 47246268 ecr 1631660800], length 452
+1335107161.201916 IP upload.esams.wikimedia.org.www > bilbo-netbook.44742: Flags [S.], seq 3097147075, ack 82286719, win 5792, options [mss 1412,sackOK,TS val 1416506051 ecr 47246241], length 0
+1335107161.202050 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246269 ecr 1416506051], length 0
+1335107161.202276 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:445, ack 1, win 5840, options [nop,nop,TS val 47246269 ecr 1416506051], length 444
+1335107161.218273 IP upload.esams.wikimedia.org.www > bilbo-netbook.44736: Flags [.], ack 454, win 6432, options [nop,nop,TS val 1416934355 ecr 47246247], length 0
+1335107161.244547 IP upload.esams.wikimedia.org.www > bilbo-netbook.44740: Flags [.], ack 451, win 6432, options [nop,nop,TS val 1631349197 ecr 47246262], length 0
+1335107161.283671 IP upload.esams.wikimedia.org.www > bilbo-netbook.44740: Flags [P.], seq 1:434, ack 451, win 6432, options [nop,nop,TS val 1631349198 ecr 47246262], length 433
+1335107161.283793 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [.], ack 434, win 6432, options [nop,nop,TS val 47246290 ecr 1631349198], length 0
+1335107161.284211 IP localhost.8118 > localhost.41971: Flags [P.], seq 1:434, ack 508, win 33768, options [nop,nop,TS val 47246290 ecr 47246240], length 433
+1335107161.284239 IP localhost.41971 > localhost.8118: Flags [.], ack 434, win 33768, options [nop,nop,TS val 47246290 ecr 47246290], length 0
+1335107161.286439 IP upload.esams.wikimedia.org.www > bilbo-netbook.44740: Flags [.], seq 434:1834, ack 451, win 6432, options [nop,nop,TS val 1631349198 ecr 47246262], length 1400
+1335107161.286566 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [.], ack 1834, win 9800, options [nop,nop,TS val 47246291 ecr 1631349198], length 0
+1335107161.286794 IP localhost.8118 > localhost.41971: Flags [P.], seq 434:1834, ack 508, win 33768, options [nop,nop,TS val 47246291 ecr 47246290], length 1400
+1335107161.286819 IP localhost.41971 > localhost.8118: Flags [.], ack 1834, win 36400, options [nop,nop,TS val 47246291 ecr 47246291], length 0
+1335107161.291885 IP upload.esams.wikimedia.org.www > bilbo-netbook.44740: Flags [P.], seq 1834:2575, ack 451, win 6432, options [nop,nop,TS val 1631349198 ecr 47246262], length 741
+1335107161.292010 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [.], ack 2575, win 12600, options [nop,nop,TS val 47246292 ecr 1631349198], length 0
+1335107161.292231 IP localhost.8118 > localhost.41971: Flags [P.], seq 1834:2575, ack 508, win 33768, options [nop,nop,TS val 47246292 ecr 47246291], length 741
+1335107161.292272 IP localhost.41971 > localhost.8118: Flags [.], ack 2575, win 39200, options [nop,nop,TS val 47246292 ecr 47246292], length 0
+1335107161.292345 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [F.], seq 451, ack 2575, win 12600, options [nop,nop,TS val 47246292 ecr 1631349198], length 0
+1335107161.292444 IP localhost.8118 > localhost.41971: Flags [F.], seq 2575, ack 508, win 33768, options [nop,nop,TS val 47246292 ecr 47246292], length 0
+1335107161.293190 IP localhost.41971 > localhost.8118: Flags [F.], seq 508, ack 2576, win 39200, options [nop,nop,TS val 47246292 ecr 47246292], length 0
+1335107161.293252 IP localhost.8118 > localhost.41971: Flags [.], ack 509, win 33768, options [nop,nop,TS val 47246292 ecr 47246292], length 0
+1335107161.323420 IP upload.esams.wikimedia.org.www > bilbo-netbook.44740: Flags [F.], seq 2575, ack 451, win 6432, options [nop,nop,TS val 1631349198 ecr 47246262], length 0
+1335107161.323544 IP bilbo-netbook.44740 > upload.esams.wikimedia.org.www: Flags [.], ack 2576, win 12600, options [nop,nop,TS val 47246300 ecr 1631349198], length 0
+1335107161.324061 IP upload.esams.wikimedia.org.www > bilbo-netbook.44744: Flags [S.], seq 3281288084, ack 86891108, win 5792, options [mss 1412,sackOK,TS val 1416543711 ecr 47246267], length 0
+1335107161.324191 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246300 ecr 1416543711], length 0
+1335107161.324371 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:469, ack 1, win 5840, options [nop,nop,TS val 47246300 ecr 1416543711], length 468
+1335107161.340077 IP upload.esams.wikimedia.org.www > bilbo-netbook.44741: Flags [.], ack 453, win 6432, options [nop,nop,TS val 1631660811 ecr 47246268], length 0
+1335107161.363763 IP upload.esams.wikimedia.org.www > bilbo-netbook.44741: Flags [P.], seq 1:412, ack 453, win 6432, options [nop,nop,TS val 1631660811 ecr 47246268], length 411
+1335107161.363890 IP bilbo-netbook.44741 > upload.esams.wikimedia.org.www: Flags [.], ack 412, win 6432, options [nop,nop,TS val 47246310 ecr 1631660811], length 0
+1335107161.364312 IP localhost.8118 > localhost.41972: Flags [P.], seq 1:412, ack 510, win 33768, options [nop,nop,TS val 47246310 ecr 47246240], length 411
+1335107161.364355 IP localhost.41972 > localhost.8118: Flags [.], ack 412, win 33768, options [nop,nop,TS val 47246310 ecr 47246310], length 0
+1335107161.372202 IP upload.esams.wikimedia.org.www > bilbo-netbook.44741: Flags [P.], seq 412:1517, ack 453, win 6432, options [nop,nop,TS val 1631660811 ecr 47246268], length 1105
+1335107161.372331 IP bilbo-netbook.44741 > upload.esams.wikimedia.org.www: Flags [.], ack 1517, win 8840, options [nop,nop,TS val 47246312 ecr 1631660811], length 0
+1335107161.372559 IP localhost.8118 > localhost.41972: Flags [P.], seq 412:1517, ack 510, win 33768, options [nop,nop,TS val 47246312 ecr 47246310], length 1105
+1335107161.372586 IP localhost.41972 > localhost.8118: Flags [.], ack 1517, win 35360, options [nop,nop,TS val 47246312 ecr 47246312], length 0
+1335107161.372666 IP bilbo-netbook.44741 > upload.esams.wikimedia.org.www: Flags [F.], seq 453, ack 1517, win 8840, options [nop,nop,TS val 47246312 ecr 1631660811], length 0
+1335107161.372730 IP upload.esams.wikimedia.org.www > bilbo-netbook.44741: Flags [F.], seq 1517, ack 453, win 6432, options [nop,nop,TS val 1631660811 ecr 47246268], length 0
+1335107161.372841 IP localhost.8118 > localhost.41972: Flags [F.], seq 1517, ack 510, win 33768, options [nop,nop,TS val 47246312 ecr 47246312], length 0
+1335107161.372865 IP bilbo-netbook.44741 > upload.esams.wikimedia.org.www: Flags [.], ack 1518, win 8840, options [nop,nop,TS val 47246312 ecr 1631660811], length 0
+1335107161.373804 IP localhost.41972 > localhost.8118: Flags [F.], seq 510, ack 1518, win 35360, options [nop,nop,TS val 47246312 ecr 47246312], length 0
+1335107161.373870 IP localhost.8118 > localhost.41972: Flags [.], ack 511, win 33768, options [nop,nop,TS val 47246312 ecr 47246312], length 0
+1335107161.374133 IP upload.esams.wikimedia.org.www > bilbo-netbook.44742: Flags [.], ack 445, win 6432, options [nop,nop,TS val 1416506065 ecr 47246269], length 0
+1335107161.378294 IP upload.esams.wikimedia.org.www > bilbo-netbook.44742: Flags [P.], seq 1:414, ack 445, win 6432, options [nop,nop,TS val 1416506065 ecr 47246269], length 413
+1335107161.378420 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [.], ack 414, win 6432, options [nop,nop,TS val 47246314 ecr 1416506065], length 0
+1335107161.378745 IP localhost.8118 > localhost.41973: Flags [P.], seq 1:414, ack 502, win 33768, options [nop,nop,TS val 47246314 ecr 47246241], length 413
+1335107161.378787 IP localhost.41973 > localhost.8118: Flags [.], ack 414, win 33768, options [nop,nop,TS val 47246314 ecr 47246314], length 0
+1335107161.384953 IP upload.esams.wikimedia.org.www > bilbo-netbook.44742: Flags [.], seq 414:1814, ack 445, win 6432, options [nop,nop,TS val 1416506065 ecr 47246269], length 1400
+1335107161.385084 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [.], ack 1814, win 9800, options [nop,nop,TS val 47246315 ecr 1416506065], length 0
+1335107161.385294 IP localhost.8118 > localhost.41973: Flags [P.], seq 414:1814, ack 502, win 33768, options [nop,nop,TS val 47246315 ecr 47246314], length 1400
+1335107161.385320 IP localhost.41973 > localhost.8118: Flags [.], ack 1814, win 36400, options [nop,nop,TS val 47246315 ecr 47246315], length 0
+1335107161.388163 IP localhost.41979 > localhost.8118: Flags [S], seq 86394628, win 32792, options [mss 16396,sackOK,TS val 47246316 ecr 0], length 0
+1335107161.388220 IP localhost.8118 > localhost.41979: Flags [S.], seq 87676385, ack 86394629, win 32768, options [mss 16396,sackOK,TS val 47246316 ecr 47246316], length 0
+1335107161.388268 IP localhost.41979 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246316 ecr 47246316], length 0
+1335107161.388804 IP localhost.41980 > localhost.8118: Flags [S], seq 90698857, win 32792, options [mss 16396,sackOK,TS val 47246316 ecr 0], length 0
+1335107161.388862 IP localhost.8118 > localhost.41980: Flags [S.], seq 96421152, ack 90698858, win 32768, options [mss 16396,sackOK,TS val 47246316 ecr 47246316], length 0
+1335107161.388907 IP localhost.41980 > localhost.8118: Flags [.], ack 1, win 32792, options [nop,nop,TS val 47246316 ecr 47246316], length 0
+1335107161.389531 IP localhost.41979 > localhost.8118: Flags [P.], seq 1:454, ack 1, win 32792, options [nop,nop,TS val 47246316 ecr 47246316], length 453
+1335107161.389601 IP localhost.8118 > localhost.41979: Flags [.], ack 454, win 33768, options [nop,nop,TS val 47246316 ecr 47246316], length 0
+1335107161.389764 IP localhost.41980 > localhost.8118: Flags [P.], seq 1:500, ack 1, win 32792, options [nop,nop,TS val 47246316 ecr 47246316], length 499
+1335107161.389812 IP localhost.8118 > localhost.41980: Flags [.], ack 500, win 33768, options [nop,nop,TS val 47246316 ecr 47246316], length 0
+1335107161.390530 IP upload.esams.wikimedia.org.www > bilbo-netbook.44742: Flags [P.], seq 1814:2297, ack 445, win 6432, options [nop,nop,TS val 1416506065 ecr 47246269], length 483
+1335107161.390649 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [.], ack 2297, win 12600, options [nop,nop,TS val 47246317 ecr 1416506065], length 0
+1335107161.390846 IP bilbo-netbook.37217 > router.domain: 7354+ A? meta.wikimedia.org. (36)
+1335107161.390930 IP localhost.8118 > localhost.41973: Flags [P.], seq 1814:2297, ack 502, win 33768, options [nop,nop,TS val 47246317 ecr 47246315], length 483
+1335107161.390968 IP localhost.41973 > localhost.8118: Flags [.], ack 2297, win 39200, options [nop,nop,TS val 47246317 ecr 47246317], length 0
+1335107161.391048 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [F.], seq 445, ack 2297, win 12600, options [nop,nop,TS val 47246317 ecr 1416506065], length 0
+1335107161.391105 IP bilbo-netbook.35087 > router.domain: 40570+ A? upload.wikimedia.org. (38)
+1335107161.391236 IP localhost.8118 > localhost.41973: Flags [F.], seq 2297, ack 502, win 33768, options [nop,nop,TS val 47246317 ecr 47246317], length 0
+1335107161.391678 IP upload.esams.wikimedia.org.www > bilbo-netbook.44742: Flags [F.], seq 2297, ack 445, win 6432, options [nop,nop,TS val 1416506065 ecr 47246269], length 0
+1335107161.391817 IP bilbo-netbook.44742 > upload.esams.wikimedia.org.www: Flags [.], ack 2298, win 12600, options [nop,nop,TS val 47246317 ecr 1416506065], length 0
+1335107161.392688 IP localhost.41973 > localhost.8118: Flags [F.], seq 502, ack 2298, win 39200, options [nop,nop,TS val 47246317 ecr 47246317], length 0
+1335107161.392763 IP localhost.8118 > localhost.41973: Flags [.], ack 503, win 33768, options [nop,nop,TS val 47246317 ecr 47246317], length 0
+1335107161.393050 IP router.domain > bilbo-netbook.35087: 40570 2/0/0 CNAME upload.esams.wikimedia.org., A 91.198.174.234 (94)
+1335107161.393339 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [S], seq 86616042, win 5840, options [mss 1460,sackOK,TS val 47246317 ecr 0], length 0
+1335107161.395621 IP upload.esams.wikimedia.org.www > bilbo-netbook.44740: Flags [.], ack 452, win 6432, options [nop,nop,TS val 1631349208 ecr 47246292], length 0
+1335107161.477326 IP upload.esams.wikimedia.org.www > bilbo-netbook.44744: Flags [.], ack 469, win 6432, options [nop,nop,TS val 1416543734 ecr 47246300], length 0
+1335107161.483482 IP upload.esams.wikimedia.org.www > bilbo-netbook.44741: Flags [.], ack 454, win 6432, options [nop,nop,TS val 1631660830 ecr 47246312], length 0
+1335107161.495722 IP upload.esams.wikimedia.org.www > bilbo-netbook.44744: Flags [P.], seq 1:438, ack 469, win 6432, options [nop,nop,TS val 1416543735 ecr 47246300], length 437
+1335107161.495844 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [.], ack 438, win 6432, options [nop,nop,TS val 47246343 ecr 1416543735], length 0
+1335107161.496508 IP localhost.8118 > localhost.41977: Flags [P.], seq 1:438, ack 526, win 33768, options [nop,nop,TS val 47246343 ecr 47246266], length 437
+1335107161.496575 IP localhost.41977 > localhost.8118: Flags [.], ack 438, win 33768, options [nop,nop,TS val 47246343 ecr 47246343], length 0
+1335107161.505234 IP upload.esams.wikimedia.org.www > bilbo-netbook.44744: Flags [.], seq 438:1838, ack 469, win 6432, options [nop,nop,TS val 1416543735 ecr 47246300], length 1400
+1335107161.505372 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [.], ack 1838, win 9800, options [nop,nop,TS val 47246345 ecr 1416543735], length 0
+1335107161.505702 IP localhost.8118 > localhost.41977: Flags [P.], seq 438:1838, ack 526, win 33768, options [nop,nop,TS val 47246345 ecr 47246343], length 1400
+1335107161.505747 IP localhost.41977 > localhost.8118: Flags [.], ack 1838, win 36400, options [nop,nop,TS val 47246345 ecr 47246345], length 0
+1335107161.517052 IP upload.esams.wikimedia.org.www > bilbo-netbook.44744: Flags [P.], seq 1838:2635, ack 469, win 6432, options [nop,nop,TS val 1416543735 ecr 47246300], length 797
+1335107161.517172 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [.], ack 2635, win 12600, options [nop,nop,TS val 47246348 ecr 1416543735], length 0
+1335107161.517535 IP localhost.8118 > localhost.41977: Flags [P.], seq 1838:2635, ack 526, win 33768, options [nop,nop,TS val 47246348 ecr 47246345], length 797
+1335107161.517578 IP localhost.41977 > localhost.8118: Flags [.], ack 2635, win 39200, options [nop,nop,TS val 47246348 ecr 47246348], length 0
+1335107161.517659 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [F.], seq 469, ack 2635, win 12600, options [nop,nop,TS val 47246348 ecr 1416543735], length 0
+1335107161.517751 IP localhost.8118 > localhost.41977: Flags [F.], seq 2635, ack 526, win 33768, options [nop,nop,TS val 47246348 ecr 47246348], length 0
+1335107161.518719 IP localhost.41977 > localhost.8118: Flags [F.], seq 526, ack 2636, win 39200, options [nop,nop,TS val 47246349 ecr 47246348], length 0
+1335107161.518784 IP localhost.8118 > localhost.41977: Flags [.], ack 527, win 33768, options [nop,nop,TS val 47246349 ecr 47246349], length 0
+1335107161.522042 IP upload.esams.wikimedia.org.www > bilbo-netbook.44744: Flags [F.], seq 2635, ack 469, win 6432, options [nop,nop,TS val 1416543735 ecr 47246300], length 0
+1335107161.522198 IP bilbo-netbook.44744 > upload.esams.wikimedia.org.www: Flags [.], ack 2636, win 12600, options [nop,nop,TS val 47246350 ecr 1416543735], length 0
+1335107161.523709 IP router.domain > bilbo-netbook.37217: 7354 3/0/0 CNAME wikimedia-lb.wikimedia.org., CNAME wikimedia-lb.esams.wikimedia.org., A 91.198.174.224 (112)
+1335107161.524200 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [S], seq 87222636, win 5840, options [mss 1460,sackOK,TS val 47246350 ecr 0], length 0
+1335107161.524620 IP bilbo-netbook.43981 > router.domain: 31859+ PTR? 224.174.198.91.in-addr.arpa. (45)
+1335107161.567646 IP upload.esams.wikimedia.org.www > bilbo-netbook.44742: Flags [.], ack 446, win 6432, options [nop,nop,TS val 1416506083 ecr 47246317], length 0
+1335107161.570683 IP upload.esams.wikimedia.org.www > bilbo-netbook.44747: Flags [S.], seq 839086373, ack 86616043, win 5792, options [mss 1412,sackOK,TS val 1417128897 ecr 47246317], length 0
+1335107161.570819 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246362 ecr 1417128897], length 0
+1335107161.571051 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [P.], seq 1:443, ack 1, win 5840, options [nop,nop,TS val 47246362 ecr 1417128897], length 442
+1335107161.584389 IP router.domain > bilbo-netbook.43981: 31859 1/0/0 PTR wikimedia-lb.esams.wikimedia.org. (91)
+1335107161.591109 IP upload.esams.wikimedia.org.www > bilbo-netbook.44744: Flags [.], ack 470, win 6432, options [nop,nop,TS val 1416543744 ecr 47246348], length 0
+1335107161.592048 IP wikimedia-lb.esams.wikimedia.org.www > bilbo-netbook.41492: Flags [S.], seq 3468722698, ack 87222637, win 5792, options [mss 1412,sackOK,TS val 1629998390 ecr 47246350], length 0
+1335107161.592212 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [.], ack 1, win 5840, options [nop,nop,TS val 47246367 ecr 1629998390], length 0
+1335107161.592452 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [P.], seq 1:399, ack 1, win 5840, options [nop,nop,TS val 47246367 ecr 1629998390], length 398
+1335107161.644868 IP upload.esams.wikimedia.org.www > bilbo-netbook.44747: Flags [.], ack 443, win 6432, options [nop,nop,TS val 1417128904 ecr 47246362], length 0
+1335107161.649353 IP upload.esams.wikimedia.org.www > bilbo-netbook.44747: Flags [P.], seq 1:435, ack 443, win 6432, options [nop,nop,TS val 1417128904 ecr 47246362], length 434
+1335107161.649459 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [.], ack 435, win 6432, options [nop,nop,TS val 47246381 ecr 1417128904], length 0
+1335107161.650019 IP localhost.8118 > localhost.41980: Flags [P.], seq 1:435, ack 500, win 33768, options [nop,nop,TS val 47246381 ecr 47246316], length 434
+1335107161.650083 IP localhost.41980 > localhost.8118: Flags [.], ack 435, win 33768, options [nop,nop,TS val 47246382 ecr 47246381], length 0
+1335107161.656341 IP upload.esams.wikimedia.org.www > bilbo-netbook.44747: Flags [.], seq 435:1835, ack 443, win 6432, options [nop,nop,TS val 1417128904 ecr 47246362], length 1400
+1335107161.656468 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [.], ack 1835, win 9800, options [nop,nop,TS val 47246383 ecr 1417128904], length 0
+1335107161.656885 IP localhost.8118 > localhost.41980: Flags [P.], seq 435:1835, ack 500, win 33768, options [nop,nop,TS val 47246383 ecr 47246382], length 1400
+1335107161.656928 IP localhost.41980 > localhost.8118: Flags [.], ack 1835, win 36400, options [nop,nop,TS val 47246383 ecr 47246383], length 0
+1335107161.690448 IP upload.esams.wikimedia.org.www > bilbo-netbook.44747: Flags [P.], seq 1835:2665, ack 443, win 6432, options [nop,nop,TS val 1417128904 ecr 47246362], length 830
+1335107161.690584 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [.], ack 2665, win 12600, options [nop,nop,TS val 47246392 ecr 1417128904], length 0
+1335107161.690781 IP localhost.8118 > localhost.41980: Flags [P.], seq 1835:2665, ack 500, win 33768, options [nop,nop,TS val 47246392 ecr 47246383], length 830
+1335107161.690809 IP localhost.41980 > localhost.8118: Flags [.], ack 2665, win 39200, options [nop,nop,TS val 47246392 ecr 47246392], length 0
+1335107161.690889 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [F.], seq 443, ack 2665, win 12600, options [nop,nop,TS val 47246392 ecr 1417128904], length 0
+1335107161.691049 IP upload.esams.wikimedia.org.www > bilbo-netbook.44747: Flags [F.], seq 2665, ack 443, win 6432, options [nop,nop,TS val 1417128904 ecr 47246362], length 0
+1335107161.691122 IP localhost.8118 > localhost.41980: Flags [F.], seq 2665, ack 500, win 33768, options [nop,nop,TS val 47246392 ecr 47246392], length 0
+1335107161.691164 IP bilbo-netbook.44747 > upload.esams.wikimedia.org.www: Flags [.], ack 2666, win 12600, options [nop,nop,TS val 47246392 ecr 1417128904], length 0
+1335107161.691955 IP localhost.41980 > localhost.8118: Flags [F.], seq 500, ack 2666, win 39200, options [nop,nop,TS val 47246392 ecr 47246392], length 0
+1335107161.692005 IP localhost.8118 > localhost.41980: Flags [.], ack 501, win 33768, options [nop,nop,TS val 47246392 ecr 47246392], length 0
+1335107161.710073 IP wikimedia-lb.esams.wikimedia.org.www > bilbo-netbook.41492: Flags [.], ack 399, win 6432, options [nop,nop,TS val 1629998397 ecr 47246367], length 0
+1335107161.718192 IP wikimedia-lb.esams.wikimedia.org.www > bilbo-netbook.41492: Flags [P.], seq 1:556, ack 399, win 6432, options [nop,nop,TS val 1629998397 ecr 47246367], length 555
+1335107161.718300 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [.], ack 556, win 6660, options [nop,nop,TS val 47246399 ecr 1629998397], length 0
+1335107161.718730 IP localhost.8118 > localhost.41979: Flags [P.], seq 1:556, ack 454, win 33768, options [nop,nop,TS val 47246399 ecr 47246316], length 555
+1335107161.718773 IP localhost.41979 > localhost.8118: Flags [.], ack 556, win 33855, options [nop,nop,TS val 47246399 ecr 47246399], length 0
+1335107161.725641 IP wikimedia-lb.esams.wikimedia.org.www > bilbo-netbook.41492: Flags [.], seq 556:1956, ack 399, win 6432, options [nop,nop,TS val 1629998397 ecr 47246367], length 1400
+1335107161.725776 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [.], ack 1956, win 9800, options [nop,nop,TS val 47246400 ecr 1629998397], length 0
+1335107161.726025 IP localhost.8118 > localhost.41979: Flags [P.], seq 556:1956, ack 454, win 33768, options [nop,nop,TS val 47246401 ecr 47246399], length 1400
+1335107161.726056 IP localhost.41979 > localhost.8118: Flags [.], ack 1956, win 36400, options [nop,nop,TS val 47246401 ecr 47246401], length 0
+1335107161.727706 IP wikimedia-lb.esams.wikimedia.org.www > bilbo-netbook.41492: Flags [P.], seq 1956:2982, ack 399, win 6432, options [nop,nop,TS val 1629998397 ecr 47246367], length 1026
+1335107161.727834 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [.], ack 2982, win 12600, options [nop,nop,TS val 47246401 ecr 1629998397], length 0
+1335107161.728054 IP localhost.8118 > localhost.41979: Flags [P.], seq 1956:2982, ack 454, win 33768, options [nop,nop,TS val 47246401 ecr 47246401], length 1026
+1335107161.728079 IP localhost.41979 > localhost.8118: Flags [.], ack 2982, win 39200, options [nop,nop,TS val 47246401 ecr 47246401], length 0
+1335107161.728153 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [F.], seq 399, ack 2982, win 12600, options [nop,nop,TS val 47246401 ecr 1629998397], length 0
+1335107161.728281 IP wikimedia-lb.esams.wikimedia.org.www > bilbo-netbook.41492: Flags [F.], seq 2982, ack 399, win 6432, options [nop,nop,TS val 1629998397 ecr 47246367], length 0
+1335107161.728366 IP localhost.8118 > localhost.41979: Flags [F.], seq 2982, ack 454, win 33768, options [nop,nop,TS val 47246401 ecr 47246401], length 0
+1335107161.728401 IP bilbo-netbook.41492 > wikimedia-lb.esams.wikimedia.org.www: Flags [.], ack 2983, win 12600, options [nop,nop,TS val 47246401 ecr 1629998397], length 0
+1335107161.730957 IP localhost.41979 > localhost.8118: Flags [F.], seq 454, ack 2983, win 39200, options [nop,nop,TS val 47246402 ecr 47246401], length 0
+1335107161.731046 IP localhost.8118 > localhost.41979: Flags [.], ack 455, win 33768, options [nop,nop,TS val 47246402 ecr 47246402], length 0
+1335107161.741657 IP upload.esams.wikimedia.org.www > bilbo-netbook.44747: Flags [.], ack 444, win 6432, options [nop,nop,TS val 1417128914 ecr 47246392], length 0
+1335107161.780099 IP wikimedia-lb.esams.wikimedia.org.www > bilbo-netbook.41492: Flags [.], ack 400, win 6432, options [nop,nop,TS val 1629998409 ecr 47246401], length 0
+1335107164.350623 ARP, Request who-has bilbo-netbook tell router, length 46
+1335107164.350736 ARP, Reply bilbo-netbook is-at 1c:75:08:e6:ef:29 (oui Unknown), length 28
+

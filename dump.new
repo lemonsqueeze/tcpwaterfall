@@ -1,0 +1,8 @@
+1344431540.003763 IP 94.126.16.7.https > host.38266: Flags [P.], seq 1716152631:1716152634, ack 3135395924, win 16616, options [nop,nop,TS val 4101734773 ecr 5745813], length 3
+1344431540.003787 ARP, Request who-has host tell router, length 46
+1344431540.003879 ARP, Reply host is-at 90:00:4e:e0:0e:d0 (oui Unknown), length 28
+1344431540.003933 IP host.38266 > 94.126.16.7.https: Flags [.], ack 3, win 6432, options [nop,nop,TS val 5747097 ecr 4101734773], length 0
+1344431540.005541 IP host.49844 > router.domain: 2260+ PTR? 3.1.168.192.in-addr.arpa. (42)
+1344431540.008761 IP router.domain > host.49844: 2260- 1/0/0 PTR host. (60)
+1344431540.009293 IP host.52652 > router.domain: 16787+ PTR? 7.16.126.94.in-addr.arpa. (42)
+1344431545.013837 IP host.52652 > router.domain: 16787+ PTR? 7.16.126.94.in-addr.arpa. (42)
