@@ -1,5 +1,8 @@
 
-
+- one line per conn. mode ?
+- split by interface ?
 - some kind of interactive mode
   launch tcpdump, ^C, show result ?
+  or better live mode -> scroll !
+
 

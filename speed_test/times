@@ -1,0 +1,16 @@
+time tcpwaterfall.py < dump.new > /dev/null
+time tcpwaterfall_perf.py < dump.new > /dev/null
+
+startup	only	     :  60ms
+  import	     : 110ms
+    parsing	     : 210ms
+
+compiled regexp      : 234ms
+string parsing       : 164ms (-70ms)
+  no hide_outside    : 155ms 
+    no isubprocess   : 140ms 
+
+
+Line Profiling:
+  decorate functions to profile with @profile, then
+  kernprof.py -l -v tcpwaterfall.py < dump.new  | less -RS
