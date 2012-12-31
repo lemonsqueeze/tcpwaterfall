@@ -1,0 +1,94 @@
+#!/usr/bin/perl
+
+my $interval = .1;
+
+my $mintime = -1;
+my $maxtime = 0;
+my @packets;
+
+foreach my $str (<STDIN>)
+{
+# 1335080288.483710 IP 192.168.1.102.59415 > 69.164.192.221.80: Flags [S], seq 4016928255, win 5840, options [mss 1460,sackOK,TS val 40991055 ecr 0], length 0    
+    if ($str =~ m|(.*) IP (.*)\.([^.]*) > (.*)\.([^.]*): Flags \[(.*)\], seq .*, win .*, options \[.*\], length (.*)|)
+    {
+	my @tab = ($1, $2, $3, $4, $5, $6, $7);
+	my ($timestamp, $src, $sport, $dst, $dport, $flags, $len) = @tab;
+#	print ".";
+
+	$mintime = $timestamp if ($mintime eq -1);
+	$maxtime = $timestamp;
+
+	push(@packets, \@tab);
+	#@{$packets[@packets]} = @tab;
+    }
+}
+#print "\n";
+
+my %streams_nos;
+my %nos_to_stream;
+my @timelines;
+sub stream_no
+{ 
+    my ($src, $sport, $dst, $dport) = @_;
+    $src =~ s|127.0.0.1|lo|g;
+    $dst =~ s|127.0.0.1|lo|g;
+    $src =~ s|192.168.1.102|eth0|g;
+    $dst =~ s|192.168.1.102|eth0|g;
+    my $id = sprintf("%15s:%-5s > %15s:%-5s", $src, $sport, $dst, $dport);
+
+    if ($stream_nos{$id})
+    { return $stream_nos{$id}; }
+    my $n = keys(%stream_nos) + 1;
+#    printf("new stream: %02i: $src:$sport-$dst:$dport\n", $n);
+    $stream_nos{$id} = $n;
+    $nos_to_stream{$n} = $id;
+    my @empty;
+    $timelines[$n] = \@empty;
+
+    # add reverse direction
+    stream_no($dst, $dport, $src, $sport);
+    return $n;
+}
+
+my $n = @packets;
+printf("packets: %i\n", $n);
+
+for (my $i = 0; $i < @packets; $i++)
+{
+    my ($timestamp, $src, $sport, $dst, $dport, $flags, $len) = @{$packets[$i]};
+    my $slot = int(($timestamp - $mintime) / $interval);
+
+    my $n = stream_no($src, $sport, $dst, $dport);
+    my $timeline = $timelines[$n];
+
+    $timeline->[$slot] = "]" if ($flags =~ m|F|);
+    $timeline->[$slot] = "[" if ($flags =~ m|S|);	
+    $timeline->[$slot] = "#" if (!$timeline->[$slot]);
+
+#    print "$timestamp $slot $n\n";
+}
+
+my $str = "";
+my $nslots = int(($maxtime - $mintime) / $interval);
+my $scaleint=10;
+for (my $i = 0; $i < $nslots; $i += $scaleint)
+{
+    $str .= sprintf("%-*s", $scaleint, ($i * $interval) . "s");
+}
+printf("    %-45s: %s\n", "", $str);
+
+
+for (my $j = 1; $j < @timelines; $j++)
+{
+#    printf("stream %02i: ", $j);
+    printf("%02i: %-45s: ", $j, $nos_to_stream{$j});
+    my @timeline = @{$timelines[$j]};
+    my $str = "";
+    for (my $i = 0; $i < @timeline; $i++)
+    {
+	$str .= ($timeline[$i] ? $timeline[$i] : ".");
+    }
+    print "$str\n";
+    print "\n" if (!($j % 2));
+}
+
